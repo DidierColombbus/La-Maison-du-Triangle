@@ -1,0 +1,3 @@
+prix : 18.70€
+matériau : acier et laiton
+type : milieu de gamme, pratique, solide, tête en laiton

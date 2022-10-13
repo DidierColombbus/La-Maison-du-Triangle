@@ -1,0 +1,3 @@
+prix : 125€
+matériau : acier
+type : profilé, élégant, clarté du son

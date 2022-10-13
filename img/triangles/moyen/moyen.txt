@@ -1,0 +1,3 @@
+prix : 55€
+matériau : acier
+type : classique, finition impeccable

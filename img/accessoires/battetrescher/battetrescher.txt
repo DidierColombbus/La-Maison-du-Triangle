@@ -1,0 +1,3 @@
+prix : 49€
+matériau : acier et bronze
+type : haut de gamme, forme de lame, tête en bronze

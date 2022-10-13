@@ -1,0 +1,3 @@
+prix : 299.99€
+matériau : bronze
+type : artisanat, sonorité unique, recommandé, 8 pouces

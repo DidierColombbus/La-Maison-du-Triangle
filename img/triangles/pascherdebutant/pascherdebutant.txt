@@ -1,0 +1,3 @@
+prix : 7.5€
+matériau : acier
+type : léger, facile à prendre en main, découverte

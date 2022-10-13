@@ -1,0 +1,3 @@
+prix : 350€
+matériau : bronze
+type : artisanat, sonorité unique, exceptionnel

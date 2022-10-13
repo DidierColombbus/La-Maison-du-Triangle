@@ -1,0 +1,3 @@
+prix : 5€
+matériau : acier
+type : petit et facile à manier, parfait pour offrir ou comme instrument de secours.

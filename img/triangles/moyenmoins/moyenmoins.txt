@@ -1,0 +1,3 @@
+prix : 35€
+matériau : acier
+type : finition classique, 7 pouces, résistant

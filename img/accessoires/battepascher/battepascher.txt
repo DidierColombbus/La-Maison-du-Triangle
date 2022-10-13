@@ -1,0 +1,3 @@
+prix : 1.5€
+matériau : alliage
+type : premier prix, longueur 150mm, diamètre 5mm

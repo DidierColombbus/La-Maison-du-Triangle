@@ -1,0 +1,3 @@
+prix : 68€
+matériau : acier et plastique
+type : Montable sur n'importe quel pied/bras de cymbale standard

@@ -1,0 +1,3 @@
+prix : 55.55€
+matériau : acier et plastique
+type : original, une main, bille d'acier, rythmique impeccable, facile

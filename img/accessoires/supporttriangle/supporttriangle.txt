@@ -1,0 +1,3 @@
+prix : 89€
+matériau : acier et plastique
+type : Permet de jouer le triangle sans batte, triangle 8" inclus
