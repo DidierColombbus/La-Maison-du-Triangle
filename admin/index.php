@@ -22,6 +22,12 @@ $content .= '<p>Bonjour ' . $_SESSION['membres']['pseudo'] . ', vous pourrez dep
 $content .= '<p><img src="../img/icons/calendar.svg" alt="" "> Nous sommes le ' . $date . ' et il est (déjà !) ' . $heure . '.</p>';
 $content .= '</div>';
 $content .= '</div>';
+$content .= '<div class="container">';
+$content .= '<video controls width="75%">
+<source src="../img/video/video_i6056p10_yd59vqpa.mp4"
+        type="video/mp4" muted>
+</video>';
+$content .= '</div>';
 $content .= '<div class="bg-light text-center"><h2>Voici les statistiques de votre site :</h2>';
 $content .= '<p><img src="../img/icons/hearts.svg" alt="" "> À ce jour nous avons ' . $comptes . ' membres.</p>';
 $content .= '<p><img src="../img/icons/file-richtext.svg" alt="" "> Ces membres nous ont présenté ' . $nbconcerts . ' concerts.</p>';
@@ -39,10 +45,10 @@ require_once("inc/header.inc.php");
 
 ?>
 
-<video controls width="75%">
+<!-- <video controls width="75%">
     <source src="../img/video/video_i6056p10_yd59vqpa.mp4"
             type="video/mp4" muted>
-</video>
+</video> -->
 
 <!-- Ici nous allons afficher le body et tout ce qui est permis par $content (qui est une fonction écrite dans le fichier init.inc.php) -->
 <div class="row container-fluid g-1">

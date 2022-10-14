@@ -13,15 +13,16 @@ require_once("inc/init.inc.php");
         $_POST['photo'] = htmlspecialchars($_POST['photo']);
         $_POST['site'] = htmlspecialchars($_POST['site']);
         // On utilise INSERT INTO pour entrer en BDD les informations du formulaire :
-        $insert = $pdo->prepare("INSERT INTO spectacles_validation(titre, description, photo, site) VALUES (:titre, :description, :photo, :site)");
+        $insert = $pdo->prepare("INSERT INTO spectacles_validation(titre, membre_id, description, photo, site) VALUES (:titre, :membre_id, :description, :photo, :site)");
         $insert->execute(array(
           ':titre' => $_POST['titre'],
+          ':membre_id' => $_SESSION['membres']['id_membre'],
           ':description' => $_POST['description'],
           ':photo' => $_POST['photo'],
           ':site' => $_POST['site']
         ));
-        return header('location:compte.php');
-        exit;
+        // return header('location:compte.php');
+        // exit;
       }else{
           // En cas d'erreur ou si le formulaire est incomplet on est invité à se connecter de nouveau sur la page formcomptes.php 
           $content.= '<div class="container">';
@@ -32,6 +33,8 @@ require_once("inc/init.inc.php");
     
       }
     }
+
+    var_dump($insert);
 
 // Affichage title différent page par page avec $title, appelé avant le require du header pour fonctionner.
 $title = "Mes concerts ";

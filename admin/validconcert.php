@@ -9,7 +9,7 @@ require_once("../inc/init.inc.php");
 if(isset($_GET['id'])){
     $requete = $pdo->prepare('SELECT * FROM spectacles_validation WHERE id_validation = :id_validation');
     $requete->execute(array(
-        ':id_validation' => $_GET['id'], 
+        ':id_validation' => $_GET['id'] 
     ));
     $fiche = $requete->fetch(PDO::FETCH_ASSOC);
 }
@@ -37,7 +37,7 @@ require_once("inc/header.inc.php");
 <div class="container row bg-light text-center m-auto g-1">
 <!-- Vérifier et ajouter : -->
 <div class="">
-  <h2>Ajouter ce spectacle :</h2>
+  <h2>Ajouter ce spectacle proposé par le membre n° <?php echo $fiche['membre_id'] ?></h2>
     <form action="valid.php" method="POST" id="valid">
     <div class="input-group has-validation">
             <div class="form-floating is-invalid">

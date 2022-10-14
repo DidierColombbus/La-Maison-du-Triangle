@@ -17,9 +17,11 @@
     <!-- Lien vers le javascript du carroussel et JS bootstrap 5.2, en async pour ne pas interférer -->
     <script src="./javascript/script.js" async></script>
 
+    <!-- L'icône du site avec le logo passé en favicon -->
+    <link rel="icon" type="image/png" href="./img/icons/favicon-32x32.png" size="32x32"/>
+
     <!-- Affichage title différent propre à chaque page avec la variable $title -->
-    <title>👀 La Maison du triangle -  <?php echo $title; ?> !
-    </title>
+    <title>La Maison du triangle -  <?php echo $title; ?> !</title>
 
 </head>
 

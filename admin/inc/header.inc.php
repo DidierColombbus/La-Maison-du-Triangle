@@ -17,10 +17,10 @@
     <!-- Lien vers le javascript du carroussel et JS bootstrap 5.2, en async pour ne pas interférer -->
     <script src="../javascript/script.js" async></script>
 
-
+     <!-- L'icône du site avec le logo passé en favicon -->
+    <link rel="icon" type="image/png" href="../img/icons/favicon-32x32.png" size="32x32"/>
     <!-- Affichage title différent propre à chaque page avec la variable $title -->
-    <title>👀 La Maison du triangle -  <?php echo $title; ?> !
-    </title>
+    <title>La Maison du triangle -  <?php echo $title; ?> !</title>
 </head>
 
 <body id="admin">
@@ -29,7 +29,7 @@
 
 <div class="navigation container w-100 p-1">
     <nav class="navbar navbar-expand-lg">
-      <a class="navbar-brand fs-2" href="index.php"><img src="../img/icons/iconefond.png" alt="" srcset="" class="col-1"> La Maison du Triangle</a>
+      <a class="navbar-brand fs-2" href="index.php"><img src="../img/icons/logo.png" alt="" srcset="" class="col-1"> La Maison du Triangle</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
