@@ -46,7 +46,7 @@ if (!empty($_POST['submitlogin'])){
                 $_SESSION["membres"]["telephone_membre"] = $membre["telephone_membre"];
                 // Si je suis admin je suis redirigé directement vers le backoffice
             if($_SESSION["membres"]["statut_membre"] == "admin") {
-                // Redirection vers la page profil de l'administrateur
+                // Redirection vers la page back-office de l'administrateur
                 header("location:admin/index.php");
                 exit();
             }
