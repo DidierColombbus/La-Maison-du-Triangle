@@ -1,7 +1,7 @@
 <?php
 require_once("inc/init.inc.php");
 
-// Sur cette page à lieu à la fois la déconnexion (et renvoie alors sur index.php), et l'echec de celle-ci, avec une invitation à revenir à la page de formcomptes.
+// Sur cette page à lieu à la fois la déconnexion (et renvoie alors sur index.php)..
 
 // On commence par rappeler les variables $pseudo et $mot_de_passe
 
@@ -9,6 +9,7 @@ $pseudo = htmlspecialchars($_POST['pseudo']);
 $mot_de_passe = htmlspecialchars($_POST['mot_de_passe']); 
 
 session_destroy();
+// On utilise return header pour renvoyer vers l'index.php si tout s'est bien passé :
 return header('location:index.php');
 exit;
 

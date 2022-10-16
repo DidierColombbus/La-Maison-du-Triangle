@@ -3,39 +3,13 @@
 // Avec le require_once suivant nous allons lier la page index avec la BDD.
 require_once("../inc/init.inc.php");
 
-// Accessoires est une page réunissant tous les accessoires pour instruments (triangles) de notre boutique.
-// Nous allons trouver ici des housses, des supports pour percussionnistes. 
-
-$requete_accessoires = $pdo->query('SELECT * FROM produits where type_produit = "accessoire"');
-while($accessoire = $requete_accessoires->fetch(PDO::FETCH_ASSOC)) {
-
-    $content.= '<div class="card border-dark w-50 container-fluid">';
-
-    $content.= '<div class="row g-0">';
-
-    $content.= '<div class="col-sm-4">';
-    $content.= '<img class="card-img-top" src="../img/accessoires/' . $accessoire['photo_produit_1'] . '" alt="' . $accessoire['nom_produit'] . '">';
-    $content.= '</div>';
-
-    $content.= '<div class="col-sm-8">';
-    $content.= '<div class="card-body">';
-    $content.= '<h4 class="card-title">' . $accessoire['nom_produit'] . '</h4>';
-    $content.= '<p class="card-text">' . $accessoire['description_produit'] . '</p>';
-    $content.= '<p class="card-text">' . $accessoire['prix_produit'] . ' €</p>';
-    $content.= '<a href="formproduit.php?id=' . $accessoire['id_produit'] . '" class="justify-content-center btn btn-danger" target="_blank">Voir le produit</a>';
-    $content.= '</div>';
-    $content.= '</div>';
-
-    $content.= '</div>';
-    $content.= '</div>';
-}
-
+////// Attention, attention ! Cette page est en cours de travaux, car en attente de l'intégration des cours tant dans la BDD que sur le site proprement dit. Merci donc de ne pas en tenir compte pour le moment. 
 
 // Affichage title différent page par page avec $title, appelé avant le require du header pour fonctionner.
-$title = "Gestion accessoires";
+$title = "Gestion cours";
 
 // Comme pour le title, voici un moyen de rendre les mots-clefs propres à chaque page.
-$keywords = "gestion, accessoires, admin";
+$keywords = "gestion, cours, admin";
 
 // Avec le require_once suivant nous allons pouvoir afficher le header commun à toutes les pages : les balises méta, les liens CSS et JS, le cdn Bootstrap ainsi que l'ouverture du Body.
 require_once("inc/header.inc.php");

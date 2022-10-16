@@ -4,7 +4,7 @@
 require_once("inc/init.inc.php");
 
 // Accessoires est une page réunissant tous les accessoires pour instruments (triangles) de notre boutique.
-// Nous allons trouver ici des housses, des supports pour percussionnistes. 
+// Nous allons trouver ici des housses (mais je n'en ai pas encore trouvé...), des battes, des supports pour percussionnistes. 
 
 $requete_accessoires = $pdo->query('SELECT * FROM produits where type_produit = "accessoire"');
 while($accessoire = $requete_accessoires->fetch(PDO::FETCH_ASSOC)) {

@@ -32,15 +32,15 @@ if(!empty($_POST['submitajout'])) {
       ':type_produit' => $_POST['type_produit'],
       ':stock' => $_POST['stock']
     ));
-
-    // return header('location:index.php');
-    // exit;
+    // On retourne sur l'index si tout s'est bien passé :
+    return header('location:index.php');
+    exit;
   }else{
-      // En cas d'erreur ou si le formulaire est incomplet on est invité à se connecter de nouveau sur la page formcomptes.php 
+      // En cas d'erreur ou si le formulaire est incomplet on est invité à se connecter de nouveau sur la page formproduit.php 
       $content.= '<div class="container">';
       $content.= '<p>Une erreur s\'est produite !</p>';
-      $content.= '<p>Veuillez vous reconnecter ou vous inscrire</p>';
-      $content.= '<button class="text-light"><a href="formcomptes.php">Suivre le lapin blanc</a></button>';
+      $content.= '<p>Veuillez remplir les champs du formulaire selon les indications.</p>';
+      $content.= '<button class="text-light"><a href="formproduit.php">Suivre le lapin blanc</a></button>';
       $content.= '</div>';
 
   }

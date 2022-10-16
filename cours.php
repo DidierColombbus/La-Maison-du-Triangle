@@ -1,10 +1,17 @@
 <?php
 
+////////Attention attention ! Cette page est en travaux, elle n'existe que dans l'optique de l'intégration des cours à l'avenir, avec l'exploitation d'une table "cours" en BDD !
+
 // Avec le require_once suivant nous allons lier la page index avec la BDD.
 require_once("inc/init.inc.php");
 
-// Cours affiche les cours que nous proposons à nos clients.
-// Il y a une description complète des cours, avec les âges proposés, un bouton de réservation, le nombre maximal de participants. 
+// Cours affichera les cours que nous proposerons à nos clients.
+// Il y aura une description complète des cours, avec les âges proposés, un bouton de réservation, le nombre maximal de participants. 
+$content .= '<div  class="bg-light container py-1">';
+$content .= '<h1 class="bg-light"> ¯\_(ツ)_/¯ Pas encore disponible malheureusement !</h1><br>';
+$content .= '<p class="bg-light">Nous sommes désolé, mais aucun cours n\'est encore ouvert actuellement. Vous pouvez nous contacter ici : <a href="contact.php">page contact</a> pour de plus amples informations à ce sujet.</p>';
+$content .= '<p class="bg-light">Ces cours vous seront proposés dés que possible, et ils permettront à tout un chacun, débutant comme confirmé, de pratiquer le triangle en toute sérénité et bienveillance.</p>';
+$content .= '</div>';
 
 // Affichage title différent page par page avec $title, appelé avant le require du header pour fonctionner.
 $title = "Cours ";
@@ -17,13 +24,12 @@ require_once("inc/header.inc.php");
 
 ?>
 
-<!-- Ici nous allons afficher le body et tout ce qui est permis par $content (qui est une fonction écrite dans le fichier init.inc.php) -->
-<!-- <?php 
+<!-- Ici nous allons afficher le body et tout ce qui est permis par $content si nécessaire (qui est une fonction écrite dans le fichier init.inc.php) -->
+ <?php
 
-// Avec l'echo, $content va afficher la présentation du triangle, le carroussel dynamique et la présentation du site.
 echo $content; 
 
-?> -->
+?> 
 
 <!-- Enfin nous allons afficher dans ce passage PHP ce qui clot la page -->
 <?php

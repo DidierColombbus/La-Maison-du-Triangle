@@ -5,7 +5,7 @@ require_once("../inc/init.inc.php");
 
 // Avec le formproduit nous allons soit modifier (UPDATE) soit ajouter (INSERT) soit supprimer (DELETE) un produit.
 
-// Pour supprimer le produit on rappelle ici avec $_GET.
+// Pour supprimer le produit on rappelle son id ici avec $_GET.
 
 // Nous allons préremplir les champs du formulaire avec les informations récupérées en BDD.
 if(isset($_GET['id'])){
@@ -16,7 +16,7 @@ if(isset($_GET['id'])){
     $fiche = $requete->fetch(PDO::FETCH_ASSOC);
 }
 
-// vérification de la session :
+// vérification de la session pour vérification :
 // var_dump($_SESSION);
 
 // Affichage title différent page par page avec $title, appelé avant le require du header pour fonctionner.

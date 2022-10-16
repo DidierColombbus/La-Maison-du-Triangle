@@ -3,8 +3,8 @@
 // Avec le require_once suivant nous allons lier la page index avec la BDD.
 require_once("inc/init.inc.php");
 
-// Lecture de la session en cours :
-var_dump($_SESSION);
+// Lecture de la session en cours pour vérification :
+// var_dump($_SESSION);
 
 // La page contact du site. 
 
@@ -41,13 +41,12 @@ require_once("inc/header.inc.php");
 <br>
 </div>
 
-<!-- Ici nous allons afficher le body et tout ce qui est permis par $content (qui est une fonction écrite dans le fichier init.inc.php) -->
-<!-- <?php 
+<!-- Ici nous allons afficher le body et tout ce qui est permis par $content si nécessaire (qui est une fonction écrite dans le fichier init.inc.php) -->
+<?php 
 
-// Avec l'echo, $content va afficher la présentation du triangle, le carroussel dynamique et la présentation du site.
 echo $content; 
 
-?> -->
+?> 
 
 <!-- Enfin nous allons afficher dans ce passage PHP ce qui clot la page -->
 <?php

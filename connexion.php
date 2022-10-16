@@ -50,6 +50,7 @@ if (!empty($_POST['submitlogin'])){
                 header("location:admin/index.php");
                 exit();
             }
+                // Redirection vers la page index.php utilisateur si le membre n'est pas admin
                 return header('location:index.php');
                 exit;
             }
@@ -75,10 +76,9 @@ $keywords = "connexion, erreur, redirection";
 require_once('inc/header.inc.php');
 ?>
 
-<!-- Ici nous allons afficher le body et tout ce qui est permis par $content (qui est une fonction écrite dans le fichier init.inc.php) -->
+<!-- Ici nous allons afficher le body et tout ce qui est permis par $content si nécessaire (qui est une fonction écrite dans le fichier init.inc.php) -->
 <?php 
 
-// Avec l'echo, $content va afficher la présentation du triangle, le carroussel dynamique et la présentation du site.
 echo $content; 
 
 ?>

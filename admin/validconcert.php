@@ -3,7 +3,7 @@
 // Avec le require_once suivant nous allons lier la page index avec la BDD.
 require_once("../inc/init.inc.php");
 
-// Ici nous allons pouvoir valider le concert proposé par un membre
+// Ici nous allons pouvoir valider le concert proposé par un membre, tout en l'identifiant par son id.
 
 // Nous allons préremplir les champs du formulaire avec les informations récupérées en BDD.
 if(isset($_GET['id'])){

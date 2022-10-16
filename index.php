@@ -3,8 +3,8 @@
 // Avec le require_once suivant nous allons lier la page index avec la BDD.
 require_once("inc/init.inc.php");
 
-// Lecture de la session en cours :
-var_dump($_SESSION);
+// Lecture de la session en cours pour vérification :
+// var_dump($_SESSION);
 
 // Index est la première page à s'afficher du site, c'est la page d'accueil.
 // Nous allons y trouver une présentation (succinte) de l'instrument triangle, un carroussel avec des photos des concerts (récupérés de façon dynamique), ainsi qu'une présentation du concept du site : une boutique, une communauté, des cours, ceci avec des liens vers les différentes pages correspondantes. 
@@ -43,7 +43,7 @@ require_once("inc/header.inc.php");
       </div>
       <p>Depuis que nous nous sommes installés, nous avons à coeur de proposer à nos clients un lieu où se retrouver, partager et échanger. Une boutique conviviale où vous trouverez des <a href="../lamaisondutriangle/accessoires.php" target="_blank" rel="noopener noreferrer">accessoires</a> originaux pour vos <a href="../lamaisondutriangle/instruments.php" target="_blank" rel="noopener noreferrer">instruments</a> de qualité.</p>
       <p>En plus de réunir en un même lieu tout le nécessaire pour s'exercer, nos clients vous proposent ici-même leurs <a href="../lamaisondutriangle/concerts.php" target="_blank" rel="noopener noreferrer">concerts</a>.</p>
-      <p>Enfin nous avons ouvert des sessions de <a href="../lamaisondutriangle/cours.php" target="_blank" rel="noopener noreferrer">cours</a> pour tous les âges et niveaux (veuillez bien lire les descriptions).</p>
+      <p>Enfin nous ouvrirons bientôt des sessions de <a href="../lamaisondutriangle/cours.php" target="_blank" rel="noopener noreferrer">cours</a> pour tous les âges et niveaux (veuillez bien lire les descriptions).</p>
     </section>
 </article>
    
@@ -55,14 +55,6 @@ require_once("inc/header.inc.php");
 </div>
 
 </div>
-
-<!-- Ici nous allons afficher le body et tout ce qui est permis par $content (qui est une fonction écrite dans le fichier init.inc.php) -->
-<!-- <?php 
-
-// Avec l'echo, $content va afficher la présentation du triangle, le carroussel dynamique et la présentation du site.
-echo $content; 
-
-?> -->
 
 <!-- Enfin nous allons afficher dans ce passage PHP ce qui clot la page -->
 <?php

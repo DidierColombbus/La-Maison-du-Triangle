@@ -2,9 +2,9 @@
 
 require_once("inc/init.inc.php");
 
-// Sur cette page à lieu à la fois l'ajout d'un produit (et renvoie alors sur admin/index.php), et l'echec de celui-ci, avec une invitation à revenir à la page de formproduit.
+// Sur cette page à lieu à la fois l'ajout d'un avatar (et renvoie alors sur index.php), et l'echec de celui-ci, avec une invitation à revenir à la page de compte.php.
 
-// Ici commence la fonction if, dont les valeurs nous viennent de l'input "submitajout" :
+// Ici commence la fonction if, dont les valeurs nous viennent de l'input "submitavatar" :
 
 if(!empty($_POST['submitavatar'])) {
     extract($_POST);
@@ -19,7 +19,7 @@ if(!empty($_POST['submitavatar'])) {
       ':avatar' => $_POST['avatar'],
       ':id_membre' => $_SESSION['membres']['id_membre']
     ));
-
+// On est redirigé vers index.php si tout s'est bien passé :
     return header('location:index.php');
     exit;
   }
@@ -32,12 +32,13 @@ if(!empty($_POST['submitavatar'])) {
 
     $modif = $pdo->prepare("UPDATE membres SET avatar= :avatar where id_membre=:id_membre");
 
-      // Je récupère l'id_membre via $_SESSION
+      // Je récupère l'id_membre via $_SESSION, merci à L.C qui se reconnaîtra :) pour cette astuce "toute simple".
 
     $modif->execute(array(
       ':avatar' => $_POST['avatar'],
       ':id_membre' => $_SESSION['membres']['id_membre']
     ));
+    // On est redirigé vers index.php si tout s'est bien passé :
     return header('location:index.php');
     exit;
 }
@@ -45,11 +46,11 @@ if(!empty($_POST['submitavatar'])) {
   }
   
   else{
-      // En cas d'erreur ou si le formulaire est incomplet on est invité à se connecter de nouveau sur la page formcomptes.php 
+      // En cas d'erreur ou si le formulaire est incomplet on est invité à se connecter de nouveau sur la page compte.php 
       $content.= '<div class="container">';
       $content.= '<p>Une erreur s\'est produite !</p>';
-      $content.= '<p>Veuillez vous reconnecter ou vous inscrire</p>';
-      $content.= '<button class="text-light"><a href="formcomptes.php">Suivre le lapin blanc</a></button>';
+      $content.= '<p>Veuillez remplir le formulaire selon les indications proposées.</p>';
+      $content.= '<button class="text-light"><a href="compte.php">Suivre le lapin blanc</a></button>';
       $content.= '</div>';
 
   }

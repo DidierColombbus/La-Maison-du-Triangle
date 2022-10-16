@@ -3,8 +3,9 @@
 // Avec le require_once suivant nous allons lier la page index avec la BDD.
 require_once("../inc/init.inc.php");
 
-// Accessoires est une page réunissant tous les accessoires pour instruments (triangles) de notre boutique.
-// Nous allons trouver ici des housses, des supports pour percussionnistes. 
+// gestionconcerts.php va permettre à l'admin de valider manuellement le concert proposé par un membre. Je pense qu'à terme il pourra aussi le supprimer, voir le modifier comme un produit normal.
+
+// Tout d'abord l'affichage des spectacles déjà autorisés :
 
 $requete_spectacles = $pdo->query('SELECT * FROM spectacles');
 while($spectacle = $requete_spectacles->fetch(PDO::FETCH_ASSOC)) {
@@ -29,6 +30,8 @@ while($spectacle = $requete_spectacles->fetch(PDO::FETCH_ASSOC)) {
     $content.= '</div>';
 }
 
+// Ensuite l'affichage des spectacles proposés, avec la possibilité d'aller les valider via la page validconcertphp puis valid.php :
+
 $requete_validspectacles = $pdo->query('SELECT * FROM spectacles_validation');
 while($validspectacle = $requete_validspectacles->fetch(PDO::FETCH_ASSOC)) {
 
@@ -52,8 +55,6 @@ while($validspectacle = $requete_validspectacles->fetch(PDO::FETCH_ASSOC)) {
     $content.= '</div>';
     $content.= '</div>';
 }
-
-
 
 // Affichage title différent page par page avec $title, appelé avant le require du header pour fonctionner.
 $title = "Les spectacles";

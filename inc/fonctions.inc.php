@@ -1,6 +1,6 @@
 <?php
 
-// Les connexions membre/admin : .
+// Les connexions membre/admin : 
 
 function connexion(){
     // structure ternaire : test ? code à exécuter si true : code à exécuter si false.

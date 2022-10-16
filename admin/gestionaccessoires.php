@@ -4,7 +4,7 @@
 require_once("../inc/init.inc.php");
 
 // Accessoires est une page réunissant tous les accessoires pour instruments (triangles) de notre boutique.
-// Nous allons trouver ici des housses, des supports pour percussionnistes. 
+// Nous allons voir tous les accessoires avec la possibilité de les modifier, de les supprimer voir d'en ajouter. 
 
 $requete_accessoires = $pdo->query('SELECT * FROM produits where type_produit = "accessoire"');
 while($accessoire = $requete_accessoires->fetch(PDO::FETCH_ASSOC)) {
@@ -29,7 +29,6 @@ while($accessoire = $requete_accessoires->fetch(PDO::FETCH_ASSOC)) {
     $content.= '</div>';
     $content.= '</div>';
 }
-
 
 // Affichage title différent page par page avec $title, appelé avant le require du header pour fonctionner.
 $title = "Gestion accessoires";

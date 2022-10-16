@@ -1,14 +1,14 @@
 <?php
 require_once("../inc/init.inc.php");
 
-// Lecture de la session en cours :
-var_dump($_SESSION);
+// Lecture de la session en cours pour vérification :
+// var_dump($_SESSION);
 
 // Index est la première page à s'afficher du site, c'est la page du back office d'où l'administrateur peut ensuite gérer une partie du contenu du site : ajouter, modifier ou supprimer un produit, autoriser l'inscription d'un concert. 
 
 date_default_timezone_set('Europe/Paris');
 $date = date('d m y');
-$heure = date('h:i:s');
+$heure = date('H:i:s');
 $reqcomptes = $pdo->query("SELECT * FROM membres");
 $comptes = $reqcomptes->rowCount();
 $reqconcerts = $pdo->query("SELECT * FROM spectacles");
@@ -23,9 +23,8 @@ $content .= '<p><img src="../img/icons/calendar.svg" alt="" "> Nous sommes le ' 
 $content .= '</div>';
 $content .= '</div>';
 $content .= '<div class="container">';
-$content .= '<video controls width="75%">
-<source src="../img/video/video_i6056p10_yd59vqpa.mp4"
-        type="video/mp4" muted>
+$content .= '<video src="../img/video/video_i6056p10_yd59vqpa.mp4"
+        type="video/mp4" autoplay=1 muted controls width="75%">
 </video>';
 $content .= '</div>';
 $content .= '<div class="bg-light text-center"><h2>Voici les statistiques de votre site :</h2>';
@@ -45,10 +44,6 @@ require_once("inc/header.inc.php");
 
 ?>
 
-<!-- <video controls width="75%">
-    <source src="../img/video/video_i6056p10_yd59vqpa.mp4"
-            type="video/mp4" muted>
-</video> -->
 
 <!-- Ici nous allons afficher le body et tout ce qui est permis par $content (qui est une fonction écrite dans le fichier init.inc.php) -->
 <div class="row container-fluid g-1">

@@ -43,7 +43,7 @@
           <li class="nav-item active">
             <a class="nav-link text-white" href=""><?php echo $title ?></a>
           </li>
-           <!--Bienvenue au membre/admin si il est connecté -->
+           <!--Bienvenue au membre/admin si il est connecté, avec une fonction imbriquée -->
            <?php if($membre = connexion()) : ?>
           <li class="nav-item">
             <a class="nav-link text-white" href="compte.php"><?php echo $membre["pseudo"]?></a>

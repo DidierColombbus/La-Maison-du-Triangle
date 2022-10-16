@@ -3,12 +3,13 @@
 // Avec le require_once suivant nous allons lier la page index avec la BDD.
 require_once("inc/init.inc.php");
 
-// Lecture de la session en cours :
-var_dump($_SESSION['membres']);
+// Lecture de la session en cours pour vérification :
+// var_dump($_SESSION['membres']);
 
 // Compte est la page profil du membre.
 // Nous récupérons ici les informations stockées durant la connexion (voir connexion : la vérification) et nous allons les distribuer dans une fiche qui apparaîtra grâce à $content.
 // Nous allons aussi y trouver la possibilité d'envoyer une fiche concert pour alimenter la BDD et la possibilité de mettre un avatar.
+// À terme il y aura aussi un indicateur correspondant au cours auquel le membre se sera inscrit.
 
 $avatar = $_SESSION['membres']['avatar'];
 

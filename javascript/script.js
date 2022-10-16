@@ -1,4 +1,4 @@
-// Le code pour faire un carroussel JS
+// Le code pour faire un carrousel JS
 
 let lst = document.querySelectorAll("#carouseljs > div");
 listNode = Array.from(lst);

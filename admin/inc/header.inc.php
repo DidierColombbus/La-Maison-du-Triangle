@@ -23,6 +23,7 @@
     <title>La Maison du triangle -  <?php echo $title; ?> !</title>
 </head>
 
+<!-- Avec l'id admin je change le background pour quelque chose de plus backstage -->
 <body id="admin">
 
 <!-- Barre de navigation avec icône, menu et connexion -->
@@ -38,7 +39,7 @@
           <li class="nav-item active">
             <a class="nav-link  text-white" href=""><?php echo $title ?> de </a>
           </li>
-           <!--Bienvenue au membre/admin si il est connecté -->
+           <!--Bienvenue au membre/admin si il est connecté, c'est la même fonction, la redirection est liée à la page connexion.php -->
            <?php if($membre = connexion()) : ?>
           <li class="nav-item">
             <a class="nav-link text-white" href="../compte.php"><?php echo $membre["pseudo"]?></a>

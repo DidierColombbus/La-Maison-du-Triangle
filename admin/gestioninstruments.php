@@ -3,7 +3,8 @@
 // Avec le require_once suivant nous allons lier la page index avec la BDD.
 require_once("../inc/init.inc.php");
 
-// La page instruments regroupe tous les triangles disponibles (en stocks), affichés latéralement, à raison d'un produit par ligne. Chaque produit permettra l'affichage d'une fiche produit/achat. 
+// Instruments est une page réunissant tous les instruments de notre boutique.
+// Nous allons voir tous les instruments avec la possibilité de les modifier, de les supprimer voir d'en ajouter. 
 
 $requete_instruments = $pdo->query('SELECT * FROM produits where type_produit = "triangle"');
 while($instrument = $requete_instruments->fetch(PDO::FETCH_ASSOC)) {
@@ -28,7 +29,6 @@ while($instrument = $requete_instruments->fetch(PDO::FETCH_ASSOC)) {
     $content.= '</div>';
     $content.= '</div>';
 }
-
 
 // Affichage title différent page par page avec $title, appelé avant le require du header pour fonctionner.
 $title = "Gestion instruments";

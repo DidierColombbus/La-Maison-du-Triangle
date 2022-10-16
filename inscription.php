@@ -31,7 +31,7 @@ if(!empty($_POST['submitinscript'])) {
       ':telephone_membre' => $_POST['telephone_membre'],
       ':adresse_membre' => $_POST['adresse_membre']
     ));
-
+    // Utilisation du return header si tout se déroule bien :
     return header('location:index.php');
     exit;
   }else{
@@ -56,10 +56,9 @@ require_once('inc/header.inc.php');
 
 ?>
 
-<!-- Ici nous allons afficher le body et tout ce qui est permis par $content (qui est une fonction écrite dans le fichier init.inc.php) -->
+<!-- Ici nous allons afficher le body et tout ce qui est permis par $content si nécessaire (qui est une fonction écrite dans le fichier init.inc.php) -->
 <?php 
 
-// Avec l'echo, $content va afficher la présentation du triangle, le carroussel dynamique et la présentation du site.
 echo $content; 
 
 ?>

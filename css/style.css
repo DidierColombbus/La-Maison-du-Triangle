@@ -12,26 +12,13 @@ body {
     background-repeat: no-repeat;
 }
 
-/* footer  */
 .navigation, main {
     background-color: rgba(160, 82, 45, 0.9);
     width: 100vw;
     text-align: center;
 }
 
-
-/* Le css du carroussel JS, suivi par un @media query pour la hauteur */
-#carouseljs{
-    height: 50vw;
-    position: relative;
-}
-
-#carouseljs div {
-    position: absolute;
-}
-
 /* Le tableau des horaires avec du flex pour le placement des span */
-
 td{
     width: 100%;
     padding: 0.3em;
@@ -44,6 +31,15 @@ td{
     background-color: rgb(160, 82, 45, 0.7);
 }
 
+/* Le css du carroussel JS, suivi par un @media query pour la hauteur */
+#carouseljs{
+    height: 50vw;
+    position: relative;
+}
+
+#carouseljs div {
+    position: absolute;
+}
 
 @media screen and (min-width: 500px) and (max-width: 780px) {
     #carouseljs {

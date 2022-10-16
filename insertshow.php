@@ -21,20 +21,21 @@ require_once("inc/init.inc.php");
           ':photo' => $_POST['photo'],
           ':site' => $_POST['site']
         ));
-        // return header('location:compte.php');
-        // exit;
+        // Utilisation du return header si tout se déroule bien :
+        return header('location:compte.php');
+        exit;
       }else{
-          // En cas d'erreur ou si le formulaire est incomplet on est invité à se connecter de nouveau sur la page formcomptes.php 
+          // En cas d'erreur ou si le formulaire est incomplet on est invité à revenir sur la page compte.php 
           $content.= '<div class="container">';
           $content.= '<p>Une erreur s\'est produite !</p>';
           $content.= '<p>Veuillez remplir le formulaire ou nous contacter</p>';
-          $content.= '<button class="text-light"><a href="comptes.php">Suivre le lapin blanc</a></button>';
+          $content.= '<button class="text-light"><a href="compte.php">Suivre le lapin blanc</a></button>';
           $content.= '</div>';
     
       }
     }
-
-    var_dump($insert);
+// Lecture de la variable $insert pour vérification :
+    // var_dump($insert);
 
 // Affichage title différent page par page avec $title, appelé avant le require du header pour fonctionner.
 $title = "Mes concerts ";

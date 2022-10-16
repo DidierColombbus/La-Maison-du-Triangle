@@ -3,10 +3,10 @@
 // Avec le require_once suivant nous allons lier la page index avec la BDD.
 require_once("inc/init.inc.php");
 
-// Lecture de la session en cours :
-var_dump($_SESSION);
+// Lecture de la session en cours pour vérification :
+// var_dump($_SESSION);
 
-// Les CGU du site. 
+// Les CGU du site. Bien entendu tout est faux et ne correspond pas du tout au site créé ici. 
 
 // Affichage title différent page par page avec $title, appelé avant le require du header pour fonctionner.
 $title = "CGU ";

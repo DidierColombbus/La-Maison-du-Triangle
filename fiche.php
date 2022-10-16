@@ -33,23 +33,11 @@ if(isset($_GET['id'])){
         $content.= '</div>';
 }
 
-// Récupération des images, et liens des concerts de façon dynamique, du plus récent au plus ancien.
-
-
-
 // Affichage title différent page par page avec $title, appelé avant le require du header pour fonctionner.
 $title = "Votre produit ";
 
 // Comme pour le title, voici un moyen de rendre les mots-clefs propres à chaque page.
 $keywords = "détails, vente, produit";
-
-// // Récupération des images pour un carroussel.
-
-// $content
-
-// foreach($fiche as $photo => $valeur):
-//   $content.= '<div><img src="../'.$photo['photo_spectacle'].'" class="w-100" alt="'.$photo['titre'].'"></div>';
-// endforeach;
 
 // Avec le require_once suivant nous allons pouvoir afficher le header commun à toutes les pages : les balises méta, les liens CSS et JS, le cdn Bootstrap ainsi que l'ouverture du Body.
 require_once("inc/header.inc.php");

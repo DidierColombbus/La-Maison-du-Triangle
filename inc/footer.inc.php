@@ -26,6 +26,8 @@
 
 </footer>
 
+
+<!-- En vue d'un débuggage du menu bootstrap, travail en cours : -->
 <script>
 document.addEventListener("DOMContentLoaded", function(){
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
