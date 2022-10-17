@@ -1,6 +1,6 @@
 <!-- On retrouvera au dessus le contenu à afficher -->
 
-<footer class="navigation container w-100 p-1">
+<footer class="container w-100 p-1">
 
     <br>
 
