@@ -29,15 +29,20 @@
 <!-- Barre de navigation avec icône, menu et connexion -->
 
 <div class="navigation container w-100 p-1">
-    <nav class="navbar navbar-expand-lg">
-      <a class="navbar-brand fs-2" href="index.php"><img src="../img/icons/logo.png" alt="" srcset="" class="col-1"> La Maison du Triangle</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<a href="index.php" class="col-2 float-center" target="_blank" rel="noopener noreferrer"><img src="../img/icons/logo.png" class="img-fluid" width="125" alt="" srcset=""></a>
+<h3 class="navbar-brand fs-2 align-text-top" href="index.php"> La Maison du Triangle</h3>
+    <nav class="navbar navbar-expand-lg ">
+    <div class="container">
+        
+        
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+        <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link  text-white" href=""><?php echo $title ?> de </a>
+            <a class="nav-link text-white" href=""><?php echo $title ?> de </a>
           </li>
            <!--Bienvenue au membre/admin si il est connecté, c'est la même fonction, la redirection est liée à la page connexion.php -->
            <?php if($membre = connexion()) : ?>
@@ -51,7 +56,7 @@
             <a class="nav-link text-white" href="gestionaccessoires.php">Accessoires</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="gestionconcerts.php">Concerts (validation)</a>
+            <a class="nav-link text-white" href="gestionconcerts.php">Concerts</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-white" href="../deconnexion.php">Déconnexion</a>
@@ -61,7 +66,7 @@
       </div>
     </nav>
           </div>
-    </header>
+           </div>
     <main class="container w-100 p-1">
 
 <!-- Fin du header, le contenu se retrouvera ici, la suite du <body> et la fermeture du <html> se retrouvent sur le footer.inc.php -->

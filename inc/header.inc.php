@@ -29,17 +29,18 @@
 
 <!-- Barre de navigation avec icône, menu et connexion -->
 
-<div class="navigation container w-100 p-1">
+<div class="navigation container w-100 p-1"><a href="index.php" class="col-2 float-center" target="_blank" rel="noopener noreferrer"><img src="./img/icons/logo.png"  class="img-fluid" width="125" alt="" srcset=""></a>
+<h3 class="navbar-brand fs-2 align-text-top" href="index.php"> La Maison du Triangle</h3>
     <nav class="navbar navbar-expand-lg">
-      <div class="container-fluid">
+      <div class="container">
         
-      <a href="index.php" class="col-2 float-start" target="_blank" rel="noopener noreferrer"><img src="./img/icons/logo.png" class="w-100" alt="" srcset=""></a>
-      <a class="navbar-brand fs-2 col-4 align-text-top" href="index.php"> La Maison du Triangle</a>
+      
+      
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <ul class="navbar-nav mr-auto">
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+        <ul class="navbar-nav">
           <li class="nav-item active">
             <a class="nav-link text-white" href=""><?php echo $title ?></a>
           </li>

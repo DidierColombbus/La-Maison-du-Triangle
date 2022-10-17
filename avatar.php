@@ -23,6 +23,7 @@ if(!empty($_POST['submitavatar'])) {
     return header('location:index.php');
     exit;
   }
+// On suit avec les infos issues de submitmodifavatar
 }elseif (!empty($_POST['submitmodifavatar'])) {
     extract($_POST);
     if(!empty($_POST)){

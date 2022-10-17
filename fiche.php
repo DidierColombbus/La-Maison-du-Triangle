@@ -22,9 +22,9 @@ if(isset($_GET['id'])){
         $content.= '<p class="card-text">Catégorie : ' . $fiche['type_produit'] . '</p>';
         $content.= '<p class="card-text">Prix : ' . $fiche['prix_produit'] . ' €</p>';
         $content.= '<div class="row container-fluid">';
-        $content.= '<div class="col-4"><img class="card-img-top img-thumbnail w-100" src="./img/' . $fiche['type_produit'] . 's/' . $fiche['photo_produit_1'] . '" alt="' . $fiche['nom_produit'] . '"></div>';
-        $content.= '<div class="col-4"><img class="card-img-top img-thumbnail w-100" src="./img/' . $fiche['type_produit'] . 's/' . $fiche['photo_produit_2'] . '" alt="' . $fiche['nom_produit'] . '"></div>';
-        $content.= '<div class="col-4"><img class="card-img-top img-thumbnail w-100" src="./img/' . $fiche['type_produit'] . 's/' . $fiche['photo_produit_3'] . '" alt="' . $fiche['nom_produit'] . '"></div>';
+        $content.= '<div class="col-4"><img class="card-img-top img-thumbnail w-100 h-auto" src="./img/' . $fiche['type_produit'] . 's/' . $fiche['photo_produit_1'] . '" alt="' . $fiche['nom_produit'] . '"></div>';
+        $content.= '<div class="col-4"><img class="card-img-top img-thumbnail w-100 h-auto" src="./img/' . $fiche['type_produit'] . 's/' . $fiche['photo_produit_2'] . '" alt="' . $fiche['nom_produit'] . '"></div>';
+        $content.= '<div class="col-4"><img class="card-img-top img-thumbnail w-100 h-auto" src="./img/' . $fiche['type_produit'] . 's/' . $fiche['photo_produit_3'] . '" alt="' . $fiche['nom_produit'] . '"></div>';
         $content.= '</div>';
         $content.= '<p class="card-text">Disponibilité : ' . $fiche['stock'] . '</p>';
         $content.= '</div>';

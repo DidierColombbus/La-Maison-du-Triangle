@@ -22,10 +22,8 @@ require_once("../inc/init.inc.php");
           ':site' => $_POST['site']
         ));
         // On va alors vider la table spectacles_validation
-        $void = $pdo->prepare("DELETE * FROM spectacles_validation WHERE titre_spectacle = :titre");
-        $void->execute(array(
-          'titre_spectacle' => $_POST['titre']
-        ));
+        $void = $pdo->prepare("DELETE FROM spectacles_validation");
+        $void->execute();
         return header('location:index.php');
         exit;
       }else{

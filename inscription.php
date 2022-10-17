@@ -17,10 +17,11 @@ if(!empty($_POST['submitinscript'])) {
     $_POST['mail_membre'] = htmlspecialchars($_POST['mail_membre']);
     $_POST['telephone_membre'] = htmlspecialchars($_POST['telephone_membre']);
     $_POST['adresse_membre'] = htmlspecialchars($_POST['adresse_membre']);
+    $avatarinsert = 'https://thiscatdoesnotexist.com/';
 
     // On utilise INSERT INTO pour entrer en BDD les informations du formulaire :
   
-    $insert = $pdo->prepare("INSERT INTO membres(pseudo, mot_de_passe, nom_membre, prenom_membre, mail_membre, telephone_membre, adresse_membre) VALUES (:pseudo, :mot_de_passe, :nom_membre, :prenom_membre, :mail_membre, :telephone_membre, :adresse_membre)"); 
+    $insert = $pdo->prepare("INSERT INTO membres(pseudo, mot_de_passe, nom_membre, prenom_membre, mail_membre, telephone_membre, adresse_membre, avatar) VALUES (:pseudo, :mot_de_passe, :nom_membre, :prenom_membre, :mail_membre, :telephone_membre, :adresse_membre, :avatar)"); 
   
     $insert->execute(array(
       ':pseudo' => $_POST['pseudo'],
@@ -29,7 +30,8 @@ if(!empty($_POST['submitinscript'])) {
       ':prenom_membre' => $_POST['prenom_membre'],
       ':mail_membre' => $_POST['mail_membre'],
       ':telephone_membre' => $_POST['telephone_membre'],
-      ':adresse_membre' => $_POST['adresse_membre']
+      ':adresse_membre' => $_POST['adresse_membre'],
+      ':avatar' => $avatarinsert
     ));
     // Utilisation du return header si tout se déroule bien :
     return header('location:index.php');

@@ -14,7 +14,7 @@ while($spectacle = $requete_spectacles->fetch(PDO::FETCH_ASSOC)) {
     $content.= '<div class="row g-0">';
 
     $content.= '<div class="col-sm-5">';
-    $content.= '<img class="card-img-top" src="./img/concertsimg/' . $spectacle['photo_spectacle'] . '" alt="' . $spectacle['titre_spectacle'] . '">';
+    $content.= '<img class="card-img-top h-auto" src="./img/concertsimg/' . $spectacle['photo_spectacle'] . '" alt="' . $spectacle['titre_spectacle'] . '">';
     $content.= '</div>';
 
     $content.= '<div class="col-sm-7">';

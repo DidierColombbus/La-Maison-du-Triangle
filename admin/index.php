@@ -23,7 +23,7 @@ $content .= '<p><img src="../img/icons/calendar.svg" alt="" "> Nous sommes le ' 
 $content .= '</div>';
 $content .= '</div>';
 $content .= '<div class="container">';
-$content .= '<video src="../img/video/video_i6056p10_yd59vqpa.mp4"
+$content .= '<video src="../img/video/lamaisondutriangle.mp4"
         type="video/mp4" autoplay=1 muted controls width="75%">
 </video>';
 $content .= '</div>';

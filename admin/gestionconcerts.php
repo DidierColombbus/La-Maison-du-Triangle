@@ -10,12 +10,12 @@ require_once("../inc/init.inc.php");
 $requete_spectacles = $pdo->query('SELECT * FROM spectacles');
 while($spectacle = $requete_spectacles->fetch(PDO::FETCH_ASSOC)) {
 
-    $content.= '<div class="card border-dark opacity-75 col-lg-6 col-md-6 col-sm-10 container-fluid">';
+    $content.= '<div class="card border-dark col-lg-6 col-md-6 col-sm-10 container-fluid">';
 
     $content.= '<div class="row g-0">';
 
     $content.= '<div class="col-sm-4">';
-    $content.= '<img class="card-img-top" src="../img/concertsimg/' . $spectacle['photo_spectacle'] . '" alt="' . $spectacle['titre_spectacle'] . '">';
+    $content.= '<img class="card-img-top h-auto" src="../img/concertsimg/' . $spectacle['photo_spectacle'] . '" alt="' . $spectacle['titre_spectacle'] . '">';
     $content.= '</div>';
 
     $content.= '<div class="col-sm-8">';
@@ -40,7 +40,7 @@ while($validspectacle = $requete_validspectacles->fetch(PDO::FETCH_ASSOC)) {
     $content.= '<div class="row g-0">';
 
     $content.= '<div class="col-sm-4">';
-    $content.= '<img class="card-img-top" src="' . $validspectacle['photo'] . '" alt="' . $validspectacle['titre'] . '">';
+    $content.= '<img class="card-img-top h-auto" src="' . $validspectacle['photo'] . '" alt="' . $validspectacle['titre'] . '">';
     $content.= '</div>';
 
     $content.= '<div class="col-sm-8">';

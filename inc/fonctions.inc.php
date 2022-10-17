@@ -3,7 +3,7 @@
 // Les connexions membre/admin : 
 
 function connexion(){
-    // structure ternaire : test ? code à exécuter si true : code à exécuter si false.
+    // structure ternaire : condition ? code à exécuter si true : code à exécuter si false.
     return !empty($_SESSION['membres']) ? $_SESSION['membres'] : false;
 }
 

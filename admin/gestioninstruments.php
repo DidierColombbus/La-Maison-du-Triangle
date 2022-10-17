@@ -14,7 +14,7 @@ while($instrument = $requete_instruments->fetch(PDO::FETCH_ASSOC)) {
     $content.= '<div class="row g-0">';
 
     $content.= '<div class="col-sm-4">';
-    $content.= '<img class="card-img-top h-100" src="../img/triangles/' . $instrument['photo_produit_1'] . '" alt="' . $instrument['nom_produit'] . '">';
+    $content.= '<img class="card-img-top  h-auto" src="../img/triangles/' . $instrument['photo_produit_1'] . '" alt="' . $instrument['nom_produit'] . '">';
     $content.= '</div>';
 
     $content.= '<div class="col-sm-8">';

@@ -14,7 +14,7 @@ while($accessoire = $requete_accessoires->fetch(PDO::FETCH_ASSOC)) {
     $content.= '<div class="row g-0">';
 
     $content.= '<div class="col-sm-4">';
-    $content.= '<img class="card-img-top img-thumbnail" src="./img/accessoires/' . $accessoire['photo_produit_1'] . '" alt="' . $accessoire['nom_produit'] . '">';
+    $content.= '<img class="card-img-top img-thumbnail h-auto" src="./img/accessoires/' . $accessoire['photo_produit_1'] . '" alt="' . $accessoire['nom_produit'] . '">';
     $content.= '</div>';
 
     $content.= '<div class="col-sm-8">';

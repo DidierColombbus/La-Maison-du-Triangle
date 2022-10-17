@@ -25,7 +25,7 @@ require_once("inc/header.inc.php");
 <p>Retrouvez tous nos produits dans notre boutique, située au 3 rue des Trilobytes Hamilton Bermudes.</p>
 <img src="./img/bgimg/locaux.JPG" class="w-50" alt="nos locaux">
 
-<div class="row container">
+<div class="row container mt-4">
     <div class="col">
         <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-65.35354614257814%2C31.99875937194732%2C-64.30160522460939%2C32.68099643258195&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=10/32.3405/-64.8276">Afficher une carte plus grande</a></small>
     </div>
