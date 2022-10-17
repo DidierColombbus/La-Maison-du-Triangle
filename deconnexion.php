@@ -20,4 +20,3 @@ $title = "Erreur déconnexion ";
 $keywords = "déconnexion, erreur, redirection";
 
 require_once('inc/header.inc.php');
-?>

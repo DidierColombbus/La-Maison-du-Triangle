@@ -6,10 +6,10 @@ require_once("../inc/init.inc.php");
 // Ici nous allons pouvoir valider le concert proposé par un membre, tout en l'identifiant par son id.
 
 // Nous allons préremplir les champs du formulaire avec les informations récupérées en BDD.
-if(isset($_GET['id'])){
+if (isset($_GET['id'])) {
     $requete = $pdo->prepare('SELECT * FROM spectacles_validation WHERE id_validation = :id_validation');
     $requete->execute(array(
-        ':id_validation' => $_GET['id'] 
+        ':id_validation' => $_GET['id']
     ));
     $fiche = $requete->fetch(PDO::FETCH_ASSOC);
 }
@@ -35,57 +35,56 @@ require_once("inc/header.inc.php");
 <!-- Formulaires : -->
 
 <div class="container row bg-light text-center m-auto g-1">
-<!-- Vérifier et ajouter : -->
-<div class="">
-  <h2>Ajouter ce spectacle proposé par le membre n° <?php echo $fiche['membre_id'] ?></h2>
-    <form action="valid.php" method="POST" id="valid">
-    <div class="input-group has-validation">
-            <div class="form-floating is-invalid">
-                <input type="text" class="form-control is-invalid" id="titre" placeholder="" name="titre" required>
-                <label for="titre">Titre : <?php echo $fiche['titre']?></label>
+    <!-- Vérifier et ajouter : -->
+    <div class="">
+        <h2>Ajouter ce spectacle proposé par le membre n° <?php echo $fiche['membre_id'] ?></h2>
+        <form action="valid.php" method="POST" id="valid">
+            <div class="input-group has-validation">
+                <div class="form-floating is-invalid">
+                    <input type="text" class="form-control is-invalid" id="titre" placeholder="" name="titre" required>
+                    <label for="titre">Titre : <?php echo $fiche['titre'] ?></label>
+                </div>
             </div>
-        </div>
-        <p>Copier ce titre : <?php echo $fiche['titre']?></P>
-        <div class="input-group has-validation">
-            <div class="form-floating is-invalid">
-                <input type="text" class="form-control is-invalid" id="site" placeholder="" name="site" required>
-                <label for="site">Site : <?php echo $fiche['site']?></label>
+            <p>Copier ce titre : <?php echo $fiche['titre'] ?></P>
+            <div class="input-group has-validation">
+                <div class="form-floating is-invalid">
+                    <input type="text" class="form-control is-invalid" id="site" placeholder="" name="site" required>
+                    <label for="site">Site : <?php echo $fiche['site'] ?></label>
+                </div>
             </div>
-        </div>
-        <p>Copier ce lien : <?php echo $fiche['site']?></p>
-        <div class="input-group has-validation">
-            <div class="form-floating is-invalid">
-                <input type="text" class="form-control is-invalid" id="photo" placeholder="" name="photo" required>
-                <label for="photo">Chemin absolu (forme "concertX.jpg")</label>
+            <p>Copier ce lien : <?php echo $fiche['site'] ?></p>
+            <div class="input-group has-validation">
+                <div class="form-floating is-invalid">
+                    <input type="text" class="form-control is-invalid" id="photo" placeholder="" name="photo" required>
+                    <label for="photo">Chemin absolu (forme "concertX.jpg")</label>
+                </div>
             </div>
-        </div>
-        <p>Rendez-vous ici : <a href="<?php echo $fiche['photo'] ?>" target="_blank" rel="noopener noreferrer">le lien de la photo proposée</a> pour enregistrer dans votre dossier img la photo proposée (dossier concertsimg dans le dossier img).</p>
-        <div class="input-group has-validation">
-            <div class="form-floating is-invalid">
-                <input type="text" class="form-control is-invalid" id="description" placeholder="" name="description" required>
-                <label for="description">Description : <?php echo $fiche['description']?></label>
+            <p>Rendez-vous ici : <a href="<?php echo $fiche['photo'] ?>" target="_blank" rel="noopener noreferrer">le lien de la photo proposée</a> pour enregistrer dans votre dossier img la photo proposée (dossier concertsimg dans le dossier img).</p>
+            <div class="input-group has-validation">
+                <div class="form-floating is-invalid">
+                    <input type="text" class="form-control is-invalid" id="description" placeholder="" name="description" required>
+                    <label for="description">Description : <?php echo $fiche['description'] ?></label>
+                </div>
             </div>
-        </div>
-        <p>Copier : <?php echo $fiche['description']?></p>
-       
-       
-        <div class="">
-            <input class="btn btn-danger" type="submit" name="submitvalid" value="Valider"> 
-        </div>
-    </form>
-</div>
+            <p>Copier : <?php echo $fiche['description'] ?></p>
+
+
+            <div class="">
+                <input class="btn btn-danger" type="submit" name="submitvalid" value="Valider">
+            </div>
+        </form>
+    </div>
 
 
 
 
-<!-- Fin container formulaires : -->
+    <!-- Fin container formulaires : -->
 </div>
 
 <!-- Enfin nous allons afficher dans ce passage PHP ce qui clot la page -->
- <?php
+<?php
 
 // Ce require_once va permettre de clore la page avec le footer.
 require_once("inc/footer.inc.php");
 
 ?>
-

@@ -21,32 +21,32 @@ require_once("inc/header.inc.php");
 
 <div class="container bg-light text-start">
 
-<br>
+    <br>
 
-<!-- Ici nous trouverons des articles car il y a un titre à chacun d'entre eux. -->
-<article>
-    <h1 class="h4"><img src="./img/icons/telephone.svg" alt="" srcset="" class="col-1"> Nous téléphoner : </h1>
-    <p class="text-center fs-2">+1 441-552-663</p>
-</article>
-<br>
-<article>
-    <h2 class="h4"><img src="./img/icons/postage-fill.svg" alt="" srcset="" class="col-1">  Notre adresse postale :</h2>
-    <p class="text-center fs-2">3 rue des Trilobytes Hamilton Bermudes</p>
-</article>
-<br>
-<article>
-    <h2 class="h4"><img src="./img/icons/envelope-open.svg" alt="" srcset="" class="col-1"> Nous envoyer un mail :</h2>
-    <p class="text-center fs-2">lamaisondutriangle@gmail.com</p>
-</article>
-<br>
+    <!-- Ici nous trouverons des articles car il y a un titre à chacun d'entre eux. -->
+    <article>
+        <h1 class="h4"><img src="./img/icons/telephone.svg" alt="" srcset="" class="col-1"> Nous téléphoner : </h1>
+        <p class="text-center fs-2">+1 441-552-663</p>
+    </article>
+    <br>
+    <article>
+        <h2 class="h4"><img src="./img/icons/postage-fill.svg" alt="" srcset="" class="col-1"> Notre adresse postale :</h2>
+        <p class="text-center fs-2">3 rue des Trilobytes Hamilton Bermudes</p>
+    </article>
+    <br>
+    <article>
+        <h2 class="h4"><img src="./img/icons/envelope-open.svg" alt="" srcset="" class="col-1"> Nous envoyer un mail :</h2>
+        <p class="text-center fs-2">lamaisondutriangle@gmail.com</p>
+    </article>
+    <br>
 </div>
 
 <!-- Ici nous allons afficher le body et tout ce qui est permis par $content si nécessaire (qui est une fonction écrite dans le fichier init.inc.php) -->
-<?php 
+<?php
 
-echo $content; 
+echo $content;
 
-?> 
+?>
 
 <!-- Enfin nous allons afficher dans ce passage PHP ce qui clot la page -->
 <?php

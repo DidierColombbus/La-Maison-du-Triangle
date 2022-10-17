@@ -6,9 +6,9 @@ require_once("../inc/init.inc.php");
 
 // Ici commence la fonction if, dont les valeurs nous viennent de l'input "submitmodif" :
 
-if(!empty($_POST['submitmodif'])) {
-    extract($_POST);
-    if(!empty($_POST)){
+if (!empty($_POST['submitmodif'])) {
+  extract($_POST);
+  if (!empty($_POST)) {
     $_POST['id_produit'] = htmlspecialchars($_POST['id_produit']);
     $_POST['nom_produit'] = htmlspecialchars($_POST['nom_produit']);
     $_POST['reference_fournisseur'] = htmlspecialchars($_POST['reference_fournisseur']);
@@ -21,7 +21,7 @@ if(!empty($_POST['submitmodif'])) {
     // On utilise UPDATE pour modifier en BDD les informations avec celles du formulaire :
 
     $modif = $pdo->prepare("UPDATE produits SET id_produit= :id_produit, nom_produit=:nom_produit,reference_fournisseur=:reference_fournisseur,fournisseur=fournisseur,description_produit=:description_produit,materiau=:materiau, prix_produit=:prix_produit,stock=:stock WHERE id_produit= :id_produit");
-  
+
     $modif->execute(array(
       ':id_produit' => $_POST['id_produit'],
       ':nom_produit' => $_POST['nom_produit'],
@@ -35,20 +35,19 @@ if(!empty($_POST['submitmodif'])) {
     // On est redirigé vers l'index.php si tout s'est bien passé :
     return header('location:index.php');
     exit;
-  }else{
-      // En cas d'erreur ou si le formulaire est incomplet on est invité à se connecter de nouveau sur la page formproduit.php 
-      $content.= '<div class="container">';
-      $content.= '<p>Une erreur s\'est produite !</p>';
-      $content.= '<p>Veuillez remplir à nouveau le formulaire en suivant les indications.</p>';
-      $content.= '<button class="text-light"><a href="formproduit.php">Suivre le lapin blanc</a></button>';
-      $content.= '</div>';
-
+  } else {
+    // En cas d'erreur ou si le formulaire est incomplet on est invité à se connecter de nouveau sur la page formproduit.php 
+    $content .= '<div class="container">';
+    $content .= '<p>Une erreur s\'est produite !</p>';
+    $content .= '<p>Veuillez remplir à nouveau le formulaire en suivant les indications.</p>';
+    $content .= '<button class="text-light"><a href="formproduit.php">Suivre le lapin blanc</a></button>';
+    $content .= '</div>';
   }
 }
 
 // var_dump($modif);
 var_dump($_POST);
- 
+
 
 // Affichage title différent page par page avec $title, appelé avant le require du header pour fonctionner.
 $title = "Erreur modification ";
@@ -61,15 +60,15 @@ require_once('inc/header.inc.php');
 ?>
 
 <!-- Ici nous allons afficher le body et tout ce qui est permis par $content (qui est une fonction écrite dans le fichier init.inc.php) -->
-<?php 
+<?php
 
 // Avec l'echo, $content va afficher la présentation du triangle, le carroussel dynamique et la présentation du site.
-echo $content; 
+echo $content;
 
 ?>
 
 <!-- Enfin nous allons afficher dans ce passage PHP ce qui clot la page -->
- <?php
+<?php
 
 // Ce require_once va permettre de clore la page avec le footer.
 require_once("inc/footer.inc.php");

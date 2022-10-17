@@ -45,5 +45,3 @@ $keywords = "compte, commande, concerts";
 
 // Avec le require_once suivant nous allons pouvoir afficher le header commun à toutes les pages : les balises méta, les liens CSS et JS, Bootstrap inclus, ainsi que l'ouverture du Body.
 require_once("inc/header.inc.php");
-
-?>
