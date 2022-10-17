@@ -29,7 +29,7 @@ require_once("inc/header.inc.php");
 ?>
 
 <!-- La div class container qui doit gérer la présentation du triangle et le carroussel latéral -->
-<div class="container-fluid row  text-start">
+<div class="container-fluid row text-start">
 
   <!-- La présentation du triangle dans une section latérale, 8/12 col -->
 
