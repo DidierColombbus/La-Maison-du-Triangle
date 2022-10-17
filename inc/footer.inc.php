@@ -21,7 +21,7 @@
     <br>
     <!-- Intégration via date() de l'année en cours pour le copyright fictif -->
     <?php
-    echo "<p>" . date("Y") . " © <i>U->Surf</i></p>";
+    echo '<p>' . date("Y") . ' © <i class="titre">U->Surf</i></p>';
     ?>
 
 </footer>

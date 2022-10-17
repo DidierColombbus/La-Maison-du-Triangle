@@ -5,6 +5,15 @@ body {
     background-repeat: no-repeat;
 }
 
+@font-face {
+    font-family: "Alkalami", serif;
+    src: url("./font/Alkalami-Regular") format("ttf");
+}
+
+.titre {
+    font-family: "Alkalami";
+}
+
 #admin {
     background: url(../img/bgimg/jorik-kleen-x1yHtSg1DsQ-unsplash.jpg);
     background-position: center;

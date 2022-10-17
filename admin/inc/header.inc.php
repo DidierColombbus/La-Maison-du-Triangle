@@ -32,7 +32,7 @@
 
   <div class="navigation container w-100 p-1">
     <a href="index.php" class="col-2 float-center" target="_blank" rel="noopener noreferrer"><img src="../img/icons/logo.png" class="img-fluid" width="125" alt="" srcset=""></a>
-    <h3 class="navbar-brand fs-2 align-text-top" href="index.php"> La Maison du Triangle</h3>
+    <h3 class="navbar-brand fs-1 align-text-top titre" href="index.php"> La Maison du Triangle</h3>
     <nav class="navbar navbar-expand-lg ">
       <div class="container">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
