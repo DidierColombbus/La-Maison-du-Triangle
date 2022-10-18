@@ -9,24 +9,24 @@ require_once("inc/init.inc.php");
 $requete_spectacles = $pdo->query('SELECT * FROM spectacles');
 while ($spectacle = $requete_spectacles->fetch(PDO::FETCH_ASSOC)) {
 
-    $content .= '<div class="card border-dark w-50  text-start">';
+    $contenu .= '<div class="card border-dark w-50  text-start">';
 
-    $content .= '<div class="row g-0">';
+    $contenu .= '<div class="row g-0">';
 
-    $content .= '<div class="col-sm-5">';
-    $content .= '<img class="card-img-top h-auto" src="./img/concertsimg/' . $spectacle['photo_spectacle'] . '" alt="' . $spectacle['titre_spectacle'] . '">';
-    $content .= '</div>';
+    $contenu .= '<div class="col-sm-5">';
+    $contenu .= '<img class="card-img-top h-auto" src="./img/concertsimg/' . $spectacle['photo_spectacle'] . '" alt="' . $spectacle['titre_spectacle'] . '">';
+    $contenu .= '</div>';
 
-    $content .= '<div class="col-sm-7">';
-    $content .= '<div class="card-body">';
-    $content .= '<h4 class="card-title">' . $spectacle['titre_spectacle'] . '</h4>';
-    $content .= '<p class="card-text">' . substr($spectacle['description_spectacle'], 0, 475) . '</p>';
-    $content .= '<a href="' . $spectacle['site_spectacle'] . '" class="btn btn-outline-light btn-block text-dark text-decoration-underline" target="_blank">Voir le site du spectacle !</a>';
-    $content .= '</div>';
-    $content .= '</div>';
+    $contenu .= '<div class="col-sm-7">';
+    $contenu .= '<div class="card-body">';
+    $contenu .= '<h4 class="card-title">' . $spectacle['titre_spectacle'] . '</h4>';
+    $contenu .= '<p class="card-text">' . substr($spectacle['description_spectacle'], 0, 475) . '</p>';
+    $contenu .= '<a href="' . $spectacle['site_spectacle'] . '" class="btn btn-outline-light btn-block text-dark text-decoration-underline" target="_blank">Voir le site du spectacle !</a>';
+    $contenu .= '</div>';
+    $contenu .= '</div>';
 
-    $content .= '</div>';
-    $content .= '</div>';
+    $contenu .= '</div>';
+    $contenu .= '</div>';
 }
 
 // Affichage title différent page par page avec $title, appelé avant le require du header pour fonctionner.
@@ -40,10 +40,10 @@ require_once("inc/header.inc.php");
 
 ?>
 
-<!-- Ici nous allons afficher le body et tout ce qui est permis par $content (qui est une fonction écrite dans le fichier init.inc.php) -->
+<!-- Ici nous allons afficher le body et tout ce qui est permis par $contenu (qui est une fonction écrite dans le fichier init.inc.php) -->
 <div class="row g-1">
     <?php
-    echo $content;
+    echo $contenu;
     ?>
 </div>
 

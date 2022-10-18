@@ -7,26 +7,26 @@ require_once("inc/init.inc.php");
 // var_dump($_SESSION['membres']);
 
 // Compte est la page profil du membre.
-// Nous récupérons ici les informations stockées durant la connexion (voir connexion : la vérification) et nous allons les distribuer dans une fiche qui apparaîtra grâce à $content.
+// Nous récupérons ici les informations stockées durant la connexion (voir connexion : la vérification) et nous allons les distribuer dans une fiche qui apparaîtra grâce à $contenu.
 // Nous allons aussi y trouver la possibilité d'envoyer une fiche concert pour alimenter la BDD et la possibilité de mettre un avatar.
 // À terme il y aura aussi un indicateur correspondant au cours auquel le membre se sera inscrit.
 
 $avatar = $_SESSION['membres']['avatar'];
 
-$content .= '<div class="card border-dark w-75 container-fluid">';
-$content .= '<div class="row g-0">';
-$content .= '<div class="col-sm-12 p-1">';
-$content .= '<div class="card-body p-1">';
-$content .= '<h4 class="card-title"> Bonjour ' . $_SESSION['membres']['pseudo'] . '</h4>';
-$content .= '<p class="card-text text-start">Nom : ' . $_SESSION['membres']['nom_membre'] . '</p>';
-$content .= '<p class="card-text text-start">Prénom : ' . $_SESSION['membres']['prenom_membre'] . '</p>';
-$content .= '<p class="card-text text-start">Mail : ' . $_SESSION['membres']['mail_membre'] . '</p>';
-$content .= '<p class="card-text text-start">Adresse : ' . $_SESSION['membres']['adresse_membre'] . '</p>';
-$content .= '<p class="card-text text-start">Numéro de téléphone : ' . $_SESSION['membres']['telephone_membre'] . '</p>';
-$content .= '</div>';
-$content .= '</div>';
-$content .= '</div>';
-$content .= '</div>';
+$contenu .= '<div class="card border-dark w-75 container-fluid">';
+$contenu .= '<div class="row g-0">';
+$contenu .= '<div class="col-sm-12 p-1">';
+$contenu .= '<div class="card-body p-1">';
+$contenu .= '<h4 class="card-title"> Bonjour ' . $_SESSION['membres']['pseudo'] . '</h4>';
+$contenu .= '<p class="card-text text-start">Nom : ' . $_SESSION['membres']['nom_membre'] . '</p>';
+$contenu .= '<p class="card-text text-start">Prénom : ' . $_SESSION['membres']['prenom_membre'] . '</p>';
+$contenu .= '<p class="card-text text-start">Mail : ' . $_SESSION['membres']['mail_membre'] . '</p>';
+$contenu .= '<p class="card-text text-start">Adresse : ' . $_SESSION['membres']['adresse_membre'] . '</p>';
+$contenu .= '<p class="card-text text-start">Numéro de téléphone : ' . $_SESSION['membres']['telephone_membre'] . '</p>';
+$contenu .= '</div>';
+$contenu .= '</div>';
+$contenu .= '</div>';
+$contenu .= '</div>';
 
 // Affichage title différent page par page avec $title, appelé avant le require du header pour fonctionner.
 $title = "Mon compte ";
@@ -45,7 +45,7 @@ require_once("inc/header.inc.php");
 </section>
 
 <div class="container row bg-light text-center m-auto g-1">
-    <!-- Ici nous allons afficher le body et tout ce qui est permis par $content (qui est une fonction écrite dans le fichier init.inc.php) -->
+    <!-- Ici nous allons afficher le body et tout ce qui est permis par $contenu (qui est une fonction écrite dans le fichier init.inc.php) -->
     <div class="row container-fluid g-1 col-6">
         <?php
         if (!empty($avatar)) {
@@ -74,7 +74,7 @@ require_once("inc/header.inc.php");
             </div>
         </form>';
         }
-        echo $content;
+        echo $contenu;
         ?>
     </div>
 

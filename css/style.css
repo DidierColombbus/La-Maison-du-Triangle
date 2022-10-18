@@ -16,9 +16,6 @@ body {
 
 #admin {
     background: url(../img/bgimg/jorik-kleen-x1yHtSg1DsQ-unsplash.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 .navigation, main {

@@ -9,25 +9,25 @@ require_once("inc/init.inc.php");
 $requete_accessoires = $pdo->query('SELECT * FROM produits where type_produit = "accessoire"');
 while ($accessoire = $requete_accessoires->fetch(PDO::FETCH_ASSOC)) {
 
-    $content .= '<div class="card border-dark w-75 container-fluid text-start">';
+    $contenu .= '<div class="card border-dark w-75 container-fluid text-start">';
 
-    $content .= '<div class="row g-0">';
+    $contenu .= '<div class="row g-0">';
 
-    $content .= '<div class="col-sm-4">';
-    $content .= '<img class="card-img-top img-thumbnail h-auto" src="./img/accessoires/' . $accessoire['photo_produit_1'] . '" alt="' . $accessoire['nom_produit'] . '">';
-    $content .= '</div>';
+    $contenu .= '<div class="col-sm-4">';
+    $contenu .= '<img class="card-img-top img-thumbnail h-auto" src="./img/accessoires/' . $accessoire['photo_produit_1'] . '" alt="' . $accessoire['nom_produit'] . '">';
+    $contenu .= '</div>';
 
-    $content .= '<div class="col-sm-8">';
-    $content .= '<div class="card-body">';
-    $content .= '<h4 class="card-title">' . $accessoire['nom_produit'] . '</h4>';
-    $content .= '<p class="card-text">' . $accessoire['description_produit'] . '</p>';
-    $content .= '<p class="card-text">' . $accessoire['prix_produit'] . ' €</p>';
-    $content .= '<a href="fiche.php?id=' . $accessoire['id_produit'] . '" class="justify-content-center btn btn-danger" target="_blank">Voir le produit</a>';
-    $content .= '</div>';
-    $content .= '</div>';
+    $contenu .= '<div class="col-sm-8">';
+    $contenu .= '<div class="card-body">';
+    $contenu .= '<h4 class="card-title">' . $accessoire['nom_produit'] . '</h4>';
+    $contenu .= '<p class="card-text">' . $accessoire['description_produit'] . '</p>';
+    $contenu .= '<p class="card-text">' . $accessoire['prix_produit'] . ' €</p>';
+    $contenu .= '<a href="fiche.php?id=' . $accessoire['id_produit'] . '" class="justify-contenu-center btn btn-danger" target="_blank">Voir le produit</a>';
+    $contenu .= '</div>';
+    $contenu .= '</div>';
 
-    $content .= '</div>';
-    $content .= '</div>';
+    $contenu .= '</div>';
+    $contenu .= '</div>';
 }
 
 
@@ -42,11 +42,11 @@ require_once("inc/header.inc.php");
 
 ?>
 
-<!-- Ici nous allons afficher le body et tout ce qui est permis par $content (qui est une fonction écrite dans le fichier init.inc.php) -->
+<!-- Ici nous allons afficher le body et tout ce qui est permis par $contenu (qui est une fonction écrite dans le fichier init.inc.php) -->
 
 <div class="row container-fluid g-1">
     <?php
-    echo $content;
+    echo $contenu;
     ?>
 </div>
 

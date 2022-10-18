@@ -16,22 +16,22 @@ $nbconcerts = $reqconcerts->rowCount();
 $reqproduits = $pdo->query("SELECT id_produit FROM produits");
 $nbproduits = $reqproduits->rowCount();
 
-$content .= '<div class="bg-light text-center"><h2>Bienvenue dans le back-office de la Maison du Triangle.</h2>';
-$content .= '<div>';
-$content .= '<p>Bonjour ' . $_SESSION['membres']['pseudo'] . ', vous pourrez depuis cet espace contrôler les inscriptions de concert et ajouter, modifier ou supprimer un des produits du catalogue de la boutique.</p>';
-$content .= '<p><img src="../img/icons/calendar.svg" alt="" "> Nous sommes le ' . $date . ' et il est (déjà !) ' . $heure . '.</p>';
-$content .= '</div>';
-$content .= '</div>';
-$content .= '<div class="container">';
-$content .= '<video src="../img/video/lamaisondutriangle.mp4"
+$contenu .= '<div class="bg-light text-center"><h2>Bienvenue dans le back-office de la Maison du Triangle.</h2>';
+$contenu .= '<div>';
+$contenu .= '<p>Bonjour ' . $_SESSION['membres']['pseudo'] . ', vous pourrez depuis cet espace contrôler les inscriptions de concert et ajouter, modifier ou supprimer un des produits du catalogue de la boutique.</p>';
+$contenu .= '<p><img src="../img/icons/calendar.svg" alt="" "> Nous sommes le ' . $date . ' et il est (déjà !) ' . $heure . '.</p>';
+$contenu .= '</div>';
+$contenu .= '</div>';
+$contenu .= '<div class="container">';
+$contenu .= '<video src="../img/video/lamaisondutriangle.mp4"
         type="video/mp4" autoplay=1 muted controls width="75%">
 </video>';
-$content .= '</div>';
-$content .= '<div class="bg-light text-center"><h2>Voici les statistiques de votre site :</h2>';
-$content .= '<p><img src="../img/icons/hearts.svg" alt="" "> À ce jour nous avons ' . $comptes . ' membres.</p>';
-$content .= '<p><img src="../img/icons/file-richtext.svg" alt="" "> Ces membres nous ont présenté ' . $nbconcerts . ' concerts.</p>';
-$content .= '<p><img src="../img/icons/calculator.svg" alt="" "> Notre boutique compte à ce jour ' . $nbproduits . ' références d\'instruments et d\'accessoires.</p>';
-$content .= '</div>';
+$contenu .= '</div>';
+$contenu .= '<div class="bg-light text-center"><h2>Voici les statistiques de votre site :</h2>';
+$contenu .= '<p><img src="../img/icons/hearts.svg" alt="" "> À ce jour nous avons ' . $comptes . ' membres.</p>';
+$contenu .= '<p><img src="../img/icons/file-richtext.svg" alt="" "> Ces membres nous ont présenté ' . $nbconcerts . ' concerts.</p>';
+$contenu .= '<p><img src="../img/icons/calculator.svg" alt="" "> Notre boutique compte à ce jour ' . $nbproduits . ' références d\'instruments et d\'accessoires.</p>';
+$contenu .= '</div>';
 
 // Affichage title différent page par page avec $title, appelé avant le require du header pour fonctionner.
 $title = "Back-office ";
@@ -45,10 +45,10 @@ require_once("inc/header.inc.php");
 ?>
 
 
-<!-- Ici nous allons afficher le body et tout ce qui est permis par $content (qui est une fonction écrite dans le fichier init.inc.php) -->
+<!-- Ici nous allons afficher le body et tout ce qui est permis par $contenu (qui est une fonction écrite dans le fichier init.inc.php) -->
 <div class="row container-fluid g-1">
         <?php
-        echo $content;
+        echo $contenu;
         ?>
 </div>
 

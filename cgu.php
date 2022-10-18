@@ -206,11 +206,11 @@ require_once("inc/header.inc.php");
 
 </div>
 
-<!-- Ici nous allons afficher le body et tout ce qui est permis par $content si nécessaire (qui est une fonction écrite dans le fichier init.inc.php) -->
+<!-- Ici nous allons afficher le body et tout ce qui est permis par $contenu si nécessaire (qui est une fonction écrite dans le fichier init.inc.php) -->
 <?php
 
 
-echo $content;
+echo $contenu;
 
 ?>
 

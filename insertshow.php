@@ -26,11 +26,11 @@ require_once("inc/init.inc.php");
         exit;
       }else{
           // En cas d'erreur ou si le formulaire est incomplet on est invité à revenir sur la page compte.php 
-          $content.= '<div class="container">';
-          $content.= '<p>Une erreur s\'est produite !</p>';
-          $content.= '<p>Veuillez remplir le formulaire ou nous contacter</p>';
-          $content.= '<button class="text-light"><a href="compte.php">Suivre le lapin blanc</a></button>';
-          $content.= '</div>';
+          $contenu.= '<div class="container">';
+          $contenu.= '<p>Une erreur s\'est produite !</p>';
+          $contenu.= '<p>Veuillez remplir le formulaire ou nous contacter</p>';
+          $contenu.= '<button class="text-light"><a href="compte.php">Suivre le lapin blanc</a></button>';
+          $contenu.= '</div>';
     
       }
     }

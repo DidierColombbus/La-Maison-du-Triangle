@@ -16,11 +16,11 @@ require_once("inc/header.inc.php");
 
 ?>
 
-<!-- Ici nous allons afficher le body et tout ce qui est permis par $content (qui est une fonction écrite dans le fichier init.inc.php) -->
+<!-- Ici nous allons afficher le body et tout ce qui est permis par $contenu (qui est une fonction écrite dans le fichier init.inc.php) -->
 
 <div class="row container-fluid g-1">
     <?php
-    echo $content;
+    echo $contenu;
     ?>
 </div>
 

@@ -20,7 +20,7 @@ $keywords = "présentation, triangle, boutique";
 $requete = $pdo->query('SELECT * FROM spectacles ORDER by id_spectacle desc limit 0,3');
 $photos = $requete->fetchAll(PDO::FETCH_ASSOC);
 foreach ($photos as $photo) :
-  $content .= '<div><a href="' . $photo['site_spectacle'] . '" target="_blank"><img src="./img/concertsimg/' . $photo['photo_spectacle'] . '" class="w-100" alt="' . $photo['titre_spectacle'] . '"></a></div>';
+  $contenu .= '<div><a href="' . $photo['site_spectacle'] . '" target="_blank"><img src="./img/concertsimg/' . $photo['photo_spectacle'] . '" class="w-100" alt="' . $photo['titre_spectacle'] . '"></a></div>';
 endforeach;
 
 // Avec le require_once suivant nous allons pouvoir afficher le header commun à toutes les pages : les balises méta, les liens CSS et JS, Bootstrap inclus, ainsi que l'ouverture du Body.
@@ -47,10 +47,10 @@ require_once("inc/header.inc.php");
     </section>
   </article>
 
-  <!-- Le carroussel en JS pour avoir une base dynamique, utilisation de $content pour l'affichage -->
+  <!-- Le carroussel en JS pour avoir une base dynamique, utilisation de $conten pour l'affichage -->
   <div id="carouseljs" class="col-lg-4 col-md-6 col-sm-12 p-1">
     <?php
-    echo $content;
+    echo $contenu;
     ?>
   </div>
 

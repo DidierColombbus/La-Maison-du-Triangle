@@ -28,11 +28,11 @@ if (!empty($_POST['submitvalid'])) {
     exit;
   } else {
     // En cas d'erreur ou si le formulaire est incomplet on est invité à se connecter de nouveau sur la page validconcert.php 
-    $content .= '<div class="container">';
-    $content .= '<p>Une erreur s\'est produite !</p>';
-    $content .= '<p>Veuillez remplir le formulaire ou nous contacter</p>';
-    $content .= '<button class="text-light"><a href="validconcert.php">Suivre le lapin blanc</a></button>';
-    $content .= '</div>';
+    $contenu .= '<div class="container">';
+    $contenu .= '<p>Une erreur s\'est produite !</p>';
+    $contenu .= '<p>Veuillez remplir le formulaire ou nous contacter</p>';
+    $contenu .= '<button class="text-light"><a href="validconcert.php">Suivre le lapin blanc</a></button>';
+    $contenu .= '</div>';
   }
 }
 
@@ -47,11 +47,10 @@ require_once('inc/header.inc.php');
 
 ?>
 
-<!-- Ici nous allons afficher le body et tout ce qui est permis par $content (qui est une fonction écrite dans le fichier init.inc.php) -->
+<!-- Ici nous allons afficher le body et tout ce qui est permis par $contenu si nécessaire(qui est une fonction écrite dans le fichier init.inc.php) -->
 <?php
 
-// Avec l'echo, $content va afficher la présentation du triangle, le carroussel dynamique et la présentation du site.
-echo $content;
+echo $contenu;
 
 ?>
 

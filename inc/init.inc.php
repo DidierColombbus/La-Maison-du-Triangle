@@ -6,7 +6,7 @@ $pdo = new PDO('mysql:host=localhost;dbname=lamaisondutriangle','root','', array
 // var_dump($pdo);
 
 // Variable pour rendre le html dynamique, marchera avec tous les echo nécessaires à l'affichage
-$content = "";
+$contenu = "";
 
 // Ouverture d'une session
 session_start();
