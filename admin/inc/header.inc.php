@@ -32,39 +32,39 @@
     <h3 class="navbar-brand fs-1 align-text-top titre" href="index.php"> La Maison du Triangle</h3>
     <nav class="navbar navbar-expand-lg">
       <div class="container">
-          <ul class="navbar-nav mx-auto row">
-            <li class="nav-item col">
-              <a class="nav-link text-white text-nowrap" href=""><?php echo $title ?> de </a>
-            </li>
-            <!--Bienvenue à l'admin si il est connecté, c'est la même fonction, la redirection est liée à la page connexion.php -->
-            <?php 
-            $contenu_nav = '';
-            if ($membre = connexion()){
-                  $contenu_nav .= '<li class="nav-item col">';
-                  $contenu_nav .= '<a class="nav-link text-white" href="compte.php">' . $membre["pseudo"] .' </a>';
-                  $contenu_nav .= '</li>';
-                  
-                  $contenu_nav .= '<li class="nav-item col">';
-                  $contenu_nav .= '<a class="nav-link text-white" href="gestioninstruments.php">Instruments</a>';
-                  $contenu_nav .= '</li>';
-                  $contenu_nav .= '<li class="nav-item col">';
-                  $contenu_nav .= '<a class="nav-link text-white" href="gestionaccessoires.php">Accessoires</a>';
-                  $contenu_nav .= '</li>';
-                  $contenu_nav .= '<li class="nav-item col">';
-                  $contenu_nav .= '<a class="nav-link text-white" href="gestionconcerts.php">Concerts</a>';
-                  $contenu_nav .= '</li>';
-                  $contenu_nav .= '<li class="nav-item col">';
-                  $contenu_nav .= '<a class="nav-link text-white" href="../deconnexion.php">Déconnexion</a>';
-                  $contenu_nav .= '</li>';
-            }
-            ?>
+        <ul class="navbar-nav mx-auto row">
+          <li class="nav-item col">
+            <a class="nav-link text-white text-nowrap" href=""><?php echo $title ?> de </a>
+          </li>
+          <!--Bienvenue à l'admin si il est connecté, c'est la même fonction, la redirection est liée à la page connexion.php -->
+          <?php
+          $contenu_nav = '';
+          if ($membre = connexion()) {
+            $contenu_nav .= '<li class="nav-item col">';
+            $contenu_nav .= '<a class="nav-link text-white" href="compte.php">' . $membre["pseudo"] . ' </a>';
+            $contenu_nav .= '</li>';
 
-            <?php 
-              echo $contenu_nav;
-            ?>
-            
-          </ul>
-        </div>
+            $contenu_nav .= '<li class="nav-item col">';
+            $contenu_nav .= '<a class="nav-link text-white" href="gestioninstruments.php">Instruments</a>';
+            $contenu_nav .= '</li>';
+            $contenu_nav .= '<li class="nav-item col">';
+            $contenu_nav .= '<a class="nav-link text-white" href="gestionaccessoires.php">Accessoires</a>';
+            $contenu_nav .= '</li>';
+            $contenu_nav .= '<li class="nav-item col">';
+            $contenu_nav .= '<a class="nav-link text-white" href="gestionconcerts.php">Concerts</a>';
+            $contenu_nav .= '</li>';
+            $contenu_nav .= '<li class="nav-item col">';
+            $contenu_nav .= '<a class="nav-link text-white" href="../deconnexion.php">Déconnexion</a>';
+            $contenu_nav .= '</li>';
+          }
+          ?>
+
+          <?php
+          echo $contenu_nav;
+          ?>
+
+        </ul>
+      </div>
     </nav>
   </div>
   </div>

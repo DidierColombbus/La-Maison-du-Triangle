@@ -44,7 +44,7 @@ require_once("inc/header.inc.php");
         <p>La reconnaissance par adresse IP est également possible.</p>
 
         <p>L'abonnement est souscrit pour une période de une année (année civile, période calendaire) et est renouvelable par tacite reconduction pour des périodes d’égales durées, sauf dénonciation adressée par lettre recommandée AR 2 mois avant chaque échéance, soit au plus tard le 31 octobre de chaque année à l’adresse suivante :Editions Dalloz - Service Relations Clientèle - 31-35 rue Froidevaux- 75685 Paris cedex 14.
-        Abonnements Dalloz Avocats Maestro et codes 3.0 : les demandes de résiliation doivent être envoyées avant le 20 du mois par lettre recommandée AR pour être effectives à partir du mois suivant.</p>
+            Abonnements Dalloz Avocats Maestro et codes 3.0 : les demandes de résiliation doivent être envoyées avant le 20 du mois par lettre recommandée AR pour être effectives à partir du mois suivant.</p>
 
         <p>La fin de l’abonnement rend immédiatement indisponible l’accès au service, y compris pour les ressources au format feuilletable.</p>
 
@@ -71,9 +71,9 @@ require_once("inc/header.inc.php");
         <p>L’abonné est seul responsable d'une violation quelconque des obligations prévues aux présentes par l'un des utilisateurs finaux.</p>
 
         <p>Afin de respecter la confidentialité de ces éléments d'identification, l’abonné garantit :
-        - qu’il ne transmettra les codes d’accès fournis par l’Editeur qu’aux seuls utilisateurs finaux tels que visés dans la facture des Editions Dalloz ;
-        - qu’il avertira sans délai le service commercial Dalloz en cas de perte ou de vol des éléments d'identification, avec confirmation par courrier recommandé avec AR ;
-        - qu’il avertira sans délai le service commercial Dalloz de la sortie d’un utilisateur final de ses effectifs, afin de permettre la clôture du (ou des) compte(s) personnel(s) visé(s) en 2.3.</p>
+            - qu’il ne transmettra les codes d’accès fournis par l’Editeur qu’aux seuls utilisateurs finaux tels que visés dans la facture des Editions Dalloz ;
+            - qu’il avertira sans délai le service commercial Dalloz en cas de perte ou de vol des éléments d'identification, avec confirmation par courrier recommandé avec AR ;
+            - qu’il avertira sans délai le service commercial Dalloz de la sortie d’un utilisateur final de ses effectifs, afin de permettre la clôture du (ou des) compte(s) personnel(s) visé(s) en 2.3.</p>
 
         <p>L’abonné est informé que DALLOZ procédera à des contrôles aléatoires du respect de ces engagements de confidentialité à partir notamment des adresses IP de connexion aux sites et que la constatation, par exemple, de connexions au moyen des codes personnels de l’abonné à partir d’un nombre anormalement élevé d’adresses IP d’origine différentes ou d’un nombre anormalement élevé de pages affichées à partir d’une seule adresse IP, suffira à démontrer la violation, par l’abonné de ses obligations et justifiera la suspension immédiate du service.</p>
 
@@ -100,7 +100,7 @@ require_once("inc/header.inc.php");
         <h2>3. Accès au service</h2>
 
         <p>Les Services Dalloz sont accessibles par le réseau Internet 24 heures sur 24 et 7 jours sur 7, sauf cas de force majeure, événement hors de contrôle de l’Editeur et/ou de l'hébergeur du service, pannes éventuelles ou interventions de maintenance nécessaires pour assurer le bon fonctionnement du service.
-        Ces dernières ne donnent lieu à aucune indemnité.</p>
+            Ces dernières ne donnent lieu à aucune indemnité.</p>
 
         <p>Un service d’assistance est à la disposition du client aux heures ouvrées de 9 H à 18 H du lundi au jeudi et de 9 H à 17 H le vendredi (sauf jour férié) au n° 01 40 92 20 85 ; ce service est limité à l’utilisation des services en ligne.</p>
 
