@@ -18,7 +18,9 @@ $keywords = "conditions, générales, utilisation";
 require_once("inc/header.inc.php");
 
 ?>
-<div class="container bg-light">
+
+<!-- Dans la section je peux mettre plusiseurs articles, qui contiennent du texte et un titre -->
+<section class="container bg-light">
     <h1 class="text-center">Conditions générales d'utilisation</h1>
     <article class="text-start">
         <h2>1. Domaine d'application</h2>
@@ -205,7 +207,7 @@ require_once("inc/header.inc.php");
         L’attention des Utilisateurs est attirée sur le fait que toute traduction des présentes conditions de vente serait fournie pour leur convenance uniquement. En cas d'incohérence ou de contradiction entre la version française et sa traduction éventuelle, la version française prévaudra. Les présentes conditions générales sont soumises à la loi française. En cas de contestation, le Tribunal de Commerce de Paris sera seul compétent, même en cas de référé, d'appel en garantie ou de pluralité de défendeurs.
     </article>
 
-</div>
+</section>
 
 <!-- Ici nous allons afficher le body et tout ce qui est permis par $contenu si nécessaire (qui est une fonction écrite dans le fichier init.inc.php) -->
 <?php

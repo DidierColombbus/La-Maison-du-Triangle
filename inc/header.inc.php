@@ -33,31 +33,27 @@
     <h2 class="navbar-brand fs-1 align-text-top titre" href="index.php">La Maison du Triangle</h2>
     <nav class="navbar navbar-expand-lg">
       <div class="container">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link text-white" href=""><?php echo $title ?></a>
+          <ul class="navbar-nav mx-auto row">
+            <li class="nav-item col">
+              <a class="nav-link text-white text-nowrap" href=""><?php echo $title ?></a>
             </li>
             
             <!--Bienvenue au membre/admin si il est connecté -->
             <?php 
             $contenu_nav = '';
             if ($membre = connexion()){
-                  $contenu_nav .= '<li class="nav-item">';
+                  $contenu_nav .= '<li class="nav-item col">';
                   $contenu_nav .= '<a class="nav-link text-white" href="compte.php">' . $membre["pseudo"] .' </a>';
                   $contenu_nav .= '</li>';
-                  $contenu_nav .= '<li class="nav-item">';
+                  $contenu_nav .= '<li class="nav-item col">';
                   $contenu_nav .= '<a class="nav-link text-white" href="deconnexion.php">Déconnexion</a>';
                   $contenu_nav .= '</li>';
               // Si il n'est pas connecté ou souhaite s'inscrire
             }else{
-                $contenu_nav .= '<li class="nav-item">';
+                $contenu_nav .= '<li class="nav-item col">';
                 $contenu_nav .= '<a class="nav-link text-white" href="formcomptes.php">Connexion</a>';
                 $contenu_nav .= '</li>';
-                $contenu_nav .= '<li class="nav-item">';
+                $contenu_nav .= '<li class="nav-item col">';
                 $contenu_nav .= '<a class="nav-link text-white" href="formcomptes.php">Inscription</a>';
                 $contenu_nav .= '</li>';
             }

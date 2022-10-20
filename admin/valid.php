@@ -21,7 +21,7 @@ if (!empty($_POST['submitvalid'])) {
       ':photo' => $_POST['photo'],
       ':site' => $_POST['site']
     ));
-    // On va alors vider la table spectacles_validation
+    // On va alors vider la table spectacles_validation avec DELETE FROM. On pourrait aussi garder ces informations pour entretenir un compte des concerts proposés par un membre.
     $void = $pdo->prepare("DELETE FROM spectacles_validation");
     $void->execute();
     return header('location:index.php');
