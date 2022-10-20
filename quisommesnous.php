@@ -35,7 +35,7 @@ require_once("inc/header.inc.php");
         <ul>
             <li>C'est d'abord au sein de la fanfare de la ville que nous avons rencontré d'autres passionnés du triangle. L'idée nous est venue alors de faire lien avec d'autres percussionnistes à travers le monde.</li>
             <li>Au travers de leurs concerts, leurs spectacles, nos membres font sans cesse découvrir de nouvelles sonorités et naître des vocations inébranlables parmi les plus jeunes.</li>
-            <li>Nous avons ouvert un partenariat avec <a href="harmonica_index.php" target="_blank">harmonica.com</a> qui vous fera bénéficer d'une réduction de 5% si vous venez de notre part.</li>
+            <li>Nous avons ouvert un partenariat avec <a href="harmonika_accueil.php" target="_blank">harmonika.com</a> qui vous fera bénéficer d'une réduction de 5% si vous venez de notre part.</li>
         </ul>
     </article>
     <br>
