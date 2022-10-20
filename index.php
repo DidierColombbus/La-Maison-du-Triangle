@@ -27,7 +27,10 @@ endforeach;
 require_once("inc/header.inc.php");
 
 ?>
-
+    <div class="container bg-light pt-1 px-1">
+<video src="./img/video/lamaisondutriangle.mp4" class="" type="video/mp4" autoplay loop muted width="100%">
+</video>
+</div>
 <!-- La div class container qui doit gérer la présentation du triangle et le carroussel latéral -->
 <div class="container-fluid row text-start">
 
@@ -35,6 +38,7 @@ require_once("inc/header.inc.php");
 
   <article class="col-lg-8 col-md-6 col-sm-12 p-1 bg-light text-dark mt-1">
     <h1 class="h2">Le triangle : un instrument pas comme les autres !</h1>
+
     <p>Depuis l'aube de l'humanité, les sons font partis de nos vies. Il y en a des beaux, des moins beaux, des très laids, des discrets, des forts, des gentils, des qui cassent les oreilles et d'autres qu'on n'oubliera pas si facilement. Parmi tous ces sons, on en retrouvera certains avec plaisir, ou avec crainte, et ils ne nous laisseront jamais indifférents. Pour se jouer de ses dieux l'homme a toujours chercher à les imiter. Il inventa l'art pour s'en souvenir, en sourire, en pleurer : s'emerveiller.</p>
     <p>Le paradoxe d'un triangle réside dans sa singulière évocation du vide, car c'est un élément tout de métal dont les notes naissent dans un creux tracé par des extrémités qui n'oseront jamais se toucher. Il est aussi amusant pour un enfant qu'un cerceau filant au bout du baton. Il est aussi ridicule pour un adulte qu'un théorème à demi oublié. Mais c'est pour le percussionniste un challenge infini, tout vibrant de pureté. Le triangle tinte en gouttes cristallines, recluses, ceintes au gré des lignes fines.</p>
     <section>

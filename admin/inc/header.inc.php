@@ -15,9 +15,6 @@
   <!-- Lien vers CSS et CSS bootstrap 5.2 -->
   <link rel="stylesheet" href="../css/style.css">
 
-  <!-- Lien vers le javascript du carroussel et JS bootstrap 5.2, en async pour ne pas interférer -->
-  <script src="../javascript/script.js" async></script>
-
   <!-- L'icône du site avec le logo passé en favicon -->
   <link rel="icon" type="image/png" href="../img/icons/favicon-32x32.png" size="32x32" />
   <!-- Affichage title différent propre à chaque page avec la variable $title -->
@@ -33,34 +30,39 @@
   <div class="navigation container w-100 p-1">
     <a href="index.php" class="col-2 float-center" target="_blank" rel="noopener noreferrer"><img src="../img/icons/logo.png" class="img-fluid" width="125" alt="" srcset=""></a>
     <h3 class="navbar-brand fs-1 align-text-top titre" href="index.php"> La Maison du Triangle</h3>
-    <nav class="navbar navbar-expand-lg ">
+    <nav class="navbar navbar-expand-lg">
       <div class="container">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link text-white" href=""><?php echo $title ?> de </a>
+          <ul class="navbar-nav mx-auto row">
+            <li class="nav-item col">
+              <a class="nav-link text-white text-nowrap" href=""><?php echo $title ?> de </a>
             </li>
-            <!--Bienvenue au membre/admin si il est connecté, c'est la même fonction, la redirection est liée à la page connexion.php -->
-            <?php if ($membre = connexion()) : ?>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="../compte.php"><?php echo $membre["pseudo"] ?></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="gestioninstruments.php">Instruments</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="gestionaccessoires.php">Accessoires</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="gestionconcerts.php">Concerts</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="../deconnexion.php">Déconnexion</a>
-              </li>
-            <?php endif; ?>
+            <!--Bienvenue à l'admin si il est connecté, c'est la même fonction, la redirection est liée à la page connexion.php -->
+            <?php 
+            $contenu_nav = '';
+            if ($membre = connexion()){
+                  $contenu_nav .= '<li class="nav-item col">';
+                  $contenu_nav .= '<a class="nav-link text-white" href="compte.php">' . $membre["pseudo"] .' </a>';
+                  $contenu_nav .= '</li>';
+                  
+                  $contenu_nav .= '<li class="nav-item col">';
+                  $contenu_nav .= '<a class="nav-link text-white" href="gestioninstruments.php">Instruments</a>';
+                  $contenu_nav .= '</li>';
+                  $contenu_nav .= '<li class="nav-item col">';
+                  $contenu_nav .= '<a class="nav-link text-white" href="gestionaccessoires.php">Accessoires</a>';
+                  $contenu_nav .= '</li>';
+                  $contenu_nav .= '<li class="nav-item col">';
+                  $contenu_nav .= '<a class="nav-link text-white" href="gestionconcerts.php">Concerts</a>';
+                  $contenu_nav .= '</li>';
+                  $contenu_nav .= '<li class="nav-item col">';
+                  $contenu_nav .= '<a class="nav-link text-white" href="../deconnexion.php">Déconnexion</a>';
+                  $contenu_nav .= '</li>';
+            }
+            ?>
+
+            <?php 
+              echo $contenu_nav;
+            ?>
+            
           </ul>
         </div>
     </nav>

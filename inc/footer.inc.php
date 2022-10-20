@@ -26,7 +26,6 @@
 
 </footer>
 
-
 <!-- En vue d'un débuggage du menu bootstrap, travail en cours : -->
 <script>
     document.addEventListener("DOMContentLoaded", function() {
@@ -40,6 +39,9 @@
 <!-- Bibliothèque jquery -->
 
 <script src="./popper/popper.min.js"></script>
+
+<!-- Lien vers le javascript du carroussel et JS bootstrap 5.2 -->
+<script src="./javascript/script.js"></script>
 
 <!-- On retrouve ici les balises fermantes de <body> et <html> ouvertes dans header.inc.php -->
 </body>
