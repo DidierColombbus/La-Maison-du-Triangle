@@ -76,17 +76,17 @@
   </div>
 
   <section class="row w-75 mx-auto mt-1">
-    <article class="col-6 col-sm-12 my-1 bg-light opacity-75">
+    <article class="col-md-6 col-sm-12 my-1 bg-light opacity-75">
       <h2 class="text-center">Mais qu'est-ce ?</h2>
       <div class="container-fluid col-6 text-center">
-        <img src="img/harmonika/harmoniciste1.jpg" class="w-50" alt="">
+        <img src="img/harmonika/harmoniciste1.jpg" class="w-100 img-fluid" alt="">
       </div>
       <p>L'harmonica est un instrument de musique à vent, de la famille des bois, à anches libres, fonctionnant sur le même principe que l'accordéon : des anches (lamelles) métalliques de longueurs différentes, produisent les notes en vibrant au passage de l'air, soufflé par la bouche ou aspiré, cette configuration étant peu fréquente pour un instrument à vent.</p>
     </article>
-    <article class="col-6 col-sm-12 my-1 bg-light opacity-75">
+    <article class="col-md-6 col-sm-12 my-1 bg-light opacity-75">
       <h2 class="text-center">Comment ?</h2>
       <div class="container-fluid col-6 text-center">
-        <img src="img/harmonika/harmoniciste2.jpg" class="w-50" alt="">
+        <img src="img/harmonika/harmoniciste2.jpg" class="w-100" alt="">
       </div>
       <p>D'une tessiture normale de trois octaves, il se décline en trois grandes familles :</p>
       <ul>
