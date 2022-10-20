@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le : dim. 16 oct. 2022 à 13:49
+-- Généré le : jeu. 20 oct. 2022 à 12:12
 -- Version du serveur : 5.7.33
 -- Version de PHP : 7.4.19
 
@@ -54,7 +54,7 @@ CREATE TABLE `membres` (
   `telephone_membre` varchar(10) NOT NULL,
   `adresse_membre` varchar(255) NOT NULL,
   `mot_de_passe` varchar(255) NOT NULL,
-  `avatar` varchar(255) DEFAULT NULL,
+  `avatar` varchar(255) NOT NULL,
   `statut_membre` enum('admin','membre') NOT NULL DEFAULT 'membre'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
@@ -63,10 +63,11 @@ CREATE TABLE `membres` (
 --
 
 INSERT INTO `membres` (`id_membre`, `nom_membre`, `prenom_membre`, `pseudo`, `mail_membre`, `telephone_membre`, `adresse_membre`, `mot_de_passe`, `avatar`, `statut_membre`) VALUES
-(1, 'Nekka', 'Oroshi', 'Caracole', 'o.nekka@furvent.com', '0102030405', '1 rue du vent', '$2y$10$VTqYnHP0jttzXQP5FBG86Olz.A62YQAcYmV/T1MtZ6wTe22mJlY1i', 'https://thiscatdoesnotexist.com/', 'admin'),
+(1, 'Nekka', 'Oroshi', 'Caracole', 'o.nekka@furvent.com', '0102030405', '1 rue du vent', '$2y$10$VTqYnHP0jttzXQP5FBG86Olz.A62YQAcYmV/T1MtZ6wTe22mJlY1i', 'https://thispersondoesnotexist.com/image', 'admin'),
 (2, 'Follereau', 'Raoul', 'Lepreux', 'raoul.follereau@lepreux.fr', '0102030405', '111 rue de la Paix', '$2y$10$Z6YGtckPSF98oVjX2D6LmufoW2omoEJOzY7PsUK/lYQH2Oel2fjIG', 'https://thiscatdoesnotexist.com/', 'membre'),
 (3, 'Polpot', 'Jean-Jacques', 'Fifrelin', 'polpot@rigolol.com', '0102030405', '666 avenue des Fifous', '$2y$10$js1k/BCGJlfs6Z5rb2tF2O5jtf7iGQX4R9UzWTbCsEmCitkLpqZK2', 'https://thiscatdoesnotexist.com/', 'membre'),
-(4, 'Ploup', 'Plip', 'Fifreline', 'cuicui@gmal.com', '0908070605', '222 rue de la Guerre', '$2y$10$ko4NKj4lZH5g/Jk2KsNDuu3t2kf789H94No1ICk4f.7dHOxdxfzKC', 'https://thispersondoesnotexist.com/image', 'membre');
+(4, 'Ploup', 'Plip', 'Fifreline', 'cuicui@gmal.com', '0908070605', '222 rue de la Guerre', '$2y$10$ko4NKj4lZH5g/Jk2KsNDuu3t2kf789H94No1ICk4f.7dHOxdxfzKC', 'https://thiscatdoesnotexist.com/', 'membre'),
+(5, 'Jaizon', 'Djesohn', 'Jason', 'jai.dje@zonsohn.com', '0102030405', '111 rue de la Paix', '$2y$10$dmr7Asvh6PienY5RExZN1eRZ194BHuOHBBgUqgyO1m9IRPtiLgiT.', 'https://thispersondoesnotexist.com/image', 'membre');
 
 -- --------------------------------------------------------
 
@@ -200,7 +201,7 @@ ALTER TABLE `cours`
 -- AUTO_INCREMENT pour la table `membres`
 --
 ALTER TABLE `membres`
-  MODIFY `id_membre` mediumint(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_membre` mediumint(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT pour la table `produits`
